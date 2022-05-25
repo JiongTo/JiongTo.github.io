@@ -392,7 +392,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.5k
+                    15.4k
                 </div>
                 
 
@@ -511,19 +511,19 @@ root:<span class="token variable">$6</span><span class="token variable">$oGs1Pqh
 Tips：默认编写的crontab文件会保存在 <span class="token punctuation">(</span>/var/spool/cron/用户名 例如: /var/spool/cron/root
 <span class="token function">crontab</span> -r 删除每个用户cront任务<span class="token punctuation">(</span>谨慎：删除所有的计划任务<span class="token punctuation">)</span>
 <span class="token function">crontab</span> -e 使用编辑器编辑当前的crontab文件
-如：*/1 * * * * <span class="token builtin class-name">echo</span> <span class="token string">"hello world"</span> <span class="token operator">>></span> /tmp/test.txt 每分钟写入文件
+如：*/1 * * * * <span class="token builtin class-name">echo</span> <span class="token string">"hello world"</span> <span class="token operator">&gt;&gt;</span> /tmp/test.txt 每分钟写入文件
 <span class="token number">2</span>、利用anacron实现异步定时任务调度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>重点关注</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;var&#x2F;spool&#x2F;cron&#x2F;*
-&#x2F;etc&#x2F;crontab
-&#x2F;etc&#x2F;cron.d&#x2F;*
-&#x2F;etc&#x2F;cron.daily&#x2F;*
-&#x2F;etc&#x2F;cron.hourly&#x2F;*
-&#x2F;etc&#x2F;cron.monthly&#x2F;*
-&#x2F;etc&#x2F;cron.weekly&#x2F;
-&#x2F;etc&#x2F;anacrontab
-&#x2F;var&#x2F;spool&#x2F;anacron&#x2F;*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">/var/spool/cron/*
+/etc/crontab
+/etc/cron.d/*
+/etc/cron.daily/*
+/etc/cron.hourly/*
+/etc/cron.monthly/*
+/etc/cron.weekly/
+/etc/anacrontab
+/var/spool/anacron/*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>检查服务</p>
 <p>chkconfig –list 命令，可以查看系统运行的服务</p>
@@ -534,10 +534,10 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 </li>
 </ol>
 <h3 id="Linux的登录日志查看文件"><a href="#Linux的登录日志查看文件" class="headerlink" title="Linux的登录日志查看文件"></a>Linux的登录日志查看文件</h3><ul>
-<li>日志默认存放位置：&#x2F;var&#x2F;log&#x2F;</li>
-<li>查看可登录的账户 cat&#x2F;etc&#x2F;passwd|grep ‘&#x2F;bin&#x2F;bash’</li>
+<li>日志默认存放位置：/var/log/</li>
+<li>查看可登录的账户 cat/etc/passwd|grep ‘/bin/bash’</li>
 <li>查看所有用户最后的登录信息 lastlog</li>
-<li>查看用户最近登录信息 last 其中，&#x2F;var&#x2F;log&#x2F;wtmp 存储登录成功的信息、btmp 存储登录失败的信息、utmp 存储当前正在登录的信息</li>
+<li>查看用户最近登录信息 last 其中，/var/log/wtmp 存储登录成功的信息、btmp 存储登录失败的信息、utmp 存储当前正在登录的信息</li>
 <li>查看当前用户登录系统情况 who</li>
 </ul>
 <h3 id="Linux常用排查命令"><a href="#Linux常用排查命令" class="headerlink" title="Linux常用排查命令"></a>Linux常用排查命令</h3><p>这个问题就是 linux 入侵排查排查的一部分</p>
@@ -555,18 +555,18 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 <ol>
 <li><p>查看当前用户登录系统情况 who</p>
 </li>
-<li><p>分析超级权限账户 awk-F： ‘{if（$3&#x3D;&#x3D;0）print $1}’&#x2F;etc&#x2F;passwd</p>
+<li><p>分析超级权限账户 awk-F： ‘{if（$3==0）print $1}’/etc/passwd</p>
 </li>
-<li><p>查看可登录的账户 cat&#x2F;etc&#x2F;passwd|grep ‘&#x2F;bin&#x2F;bash’</p>
+<li><p>查看可登录的账户 cat/etc/passwd|grep ‘/bin/bash’</p>
 </li>
 <li><p>查看用户错误的登录信息 lastb</p>
 </li>
 <li><p>查看所有用户最后的登录信息 lastlog</p>
 </li>
 <li><p>查看用户最近登录信息 last</p>
-<p>&#x2F;var&#x2F;log&#x2F; 其中，&#x2F;var&#x2F;log&#x2F;wtmp 存储登录成功的信息、btmp存储登录失败的信息、utmp存储当前正在登录的信息</p>
+<p>/var/log/ 其中，/var/log/wtmp 存储登录成功的信息、btmp存储登录失败的信息、utmp存储当前正在登录的信息</p>
 </li>
-<li><p>查看空口令账户 awk-F： ‘length（$2）&#x3D;&#x3D;0 {print $1}’&#x2F;etc&#x2F;shadow</p>
+<li><p>查看空口令账户 awk-F： ‘length（$2）==0 {print $1}’/etc/shadow</p>
 </li>
 </ol>
 <h3 id="Linux基线规范"><a href="#Linux基线规范" class="headerlink" title="Linux基线规范"></a>Linux基线规范</h3><p>每个公司有每个公司的基线规范体系，但是答题分为下列五个方面</p>
@@ -604,7 +604,7 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 <p><strong>IP 协议安全要求</strong></p>
 <ul>
 <li>远程登录取消 telnet 采用 ssh</li>
-<li>设置 &#x2F;etc&#x2F;hosts.allow 和 deny</li>
+<li>设置 /etc/hosts.allow 和 deny</li>
 <li>禁止 ICMP 重定向</li>
 <li>禁止源路由转发</li>
 <li>防 ssh 破解，iptables (对已经建立的所有链接都放行，限制每分钟连接 ssh 的次数)+ denyhost (添加 ip 拒绝访问)</li>
@@ -700,8 +700,8 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 <li>有规则地检查你的管理员组和服务:</li>
 <li>严格控制服务器的写访问权限</li>
 <li>设置复杂的密码</li>
-<li>减少&#x2F;排除 Web 服务器上的共享</li>
-<li>禁用 TCP&#x2F;IP 协议中的 NetBIOS</li>
+<li>减少/排除 Web 服务器上的共享</li>
+<li>禁用 TCP/IP 协议中的 NetBIOS</li>
 <li>使用 TCP 端口阻塞</li>
 <li>仔细检查 .bat 和 .exe 文件：每周搜索一次 .bat</li>
 <li>管理 IIS 目录安全</li>
@@ -742,11 +742,11 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 </ul>
 <p><strong>设备</strong></p>
 <p><a target="_blank" rel="noopener" href="https://wiki.wgpsec.org/knowledge/base/safety.html">网络安全设备常识</a></p>
-<p>常见的 HW 设备有：公安部网防G01、K01、360网康&#x2F;网神防火墙、微步威胁情报、安恒云-Web应用防火墙（玄武盾）、默安蜜罐、知道创宇蜜罐、山石防火墙</p>
+<p>常见的 HW 设备有：公安部网防G01、K01、360网康/网神防火墙、微步威胁情报、安恒云-Web应用防火墙（玄武盾）、默安蜜罐、知道创宇蜜罐、山石防火墙</p>
 <p><img src="https://s2.loli.net/2022/05/25/ie4h5RDb9mOgKcZ.png" alt="image-20211224223800578"></p>
 <p>即客户拥有物理的基础设施（自建机房、自购设备、网络）</p>
 <ul>
-<li><p>NGAF&#x2F;NGFW：下一代 Web 应用防火墙（Next Generation Application Firewall，<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/zhishi/edit-582196.html">通防火墙和下一代防火墙的区别</a>），聚合了以下功能</p>
+<li><p>NGAF/NGFW：下一代 Web 应用防火墙（Next Generation Application Firewall，<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/zhishi/edit-582196.html">通防火墙和下一代防火墙的区别</a>），聚合了以下功能</p>
 <ul>
 <li>IDS<ul>
 <li>HIDS：基于主机的入侵检测系统</li>
@@ -817,7 +817,7 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 <h3 id="SQL注入检测"><a href="#SQL注入检测" class="headerlink" title="SQL注入检测"></a>SQL注入检测</h3><p>SQL注入攻击检测可根据入侵事件发生的前后进行区分，在入侵前可以对 Payload 进行检测等方式以预防 SQL 注入攻击。在入侵检测后可以通过对数据库、IIS 日志等进行检查以进行判断</p>
 <p>传统的SQL注入检测方法通常根据经验提取特征，然后基于规则库匹配的方法来检测是否为 SQL 注入语句，其设计一般较为复杂，且规则模式更新频繁，在此采用机器学习的方式尝试对 SQL 注入语句进行检测</p>
 <h3 id="DDOS-CC应急思路以及如何防范"><a href="#DDOS-CC应急思路以及如何防范" class="headerlink" title="DDOS CC应急思路以及如何防范"></a>DDOS CC应急思路以及如何防范</h3><p>目前对于低网络层的 DDoS 攻击有一些有效的防护手段，如丢弃第一次 SYN 包，上流量防护设备，上 WAF 封禁地址等</p>
-<p>比较难缠的是第七层，第八层的 CC 攻击，它会找到目标网站上比较消耗资源的关键位置，重复发起攻击以消耗 CPU&#x2F;内存&#x2F;数据库&#x2F;IO 等资源，目前的应付手段有：</p>
+<p>比较难缠的是第七层，第八层的 CC 攻击，它会找到目标网站上比较消耗资源的关键位置，重复发起攻击以消耗 CPU/内存/数据库/IO 等资源，目前的应付手段有：</p>
 <ol>
 <li>优化资源消耗高位置的代码</li>
 <li>增加硬件设备</li>
@@ -852,8 +852,8 @@ Tips：默认编写的crontab文件会保存在 <span class="token punctuation">
 <p>挖矿木马占用系统资源进行挖矿行为，一般电脑会有以下特征</p>
 <ol>
 <li>系统响应缓慢</li>
-<li>CPU&#x2F;显卡使用率过高</li>
-<li>内存&#x2F;带宽占用高</li>
+<li>CPU/显卡使用率过高</li>
+<li>内存/带宽占用高</li>
 </ol>
 <p>登录进可疑主机后，可以通过以下方式确认挖矿木马（即入侵排查流程）</p>
 <ol>
@@ -922,7 +922,7 @@ iptables -A OUTPUT -d xmr.crypto- pool.fr -j DROP<span aria-hidden="true" class=
 <p><a target="_blank" rel="noopener" href="https://www.freebuf.com/column/204796.html">常见WebShell客户端的流量特征及检测思路</a></p>
 <p><strong>菜刀</strong></p>
 <p>菜刀 webshell 只使用了 url 编码 + base64 编码</p>
-<p>shell 特征就是传输参数名为 z0，还存在<code>int_set(&quot;display_erros&quot;,&quot;0&quot;)</code>字符串特征</p>
+<p>shell 特征就是传输参数名为 z0，还存在<code>int_set("display_erros","0")</code>字符串特征</p>
 <p><strong>蚁剑</strong></p>
 <p>默认的蚁剑 shell，连接时会请求两次，其请求体只是经过 url 编码，其流量中也存在和蚁剑一样的代码</p>
 <p>第一次请求，关闭报错和 magic_quotes，接下来去获取主机的信息</p>
@@ -945,11 +945,11 @@ iptables -A OUTPUT -d xmr.crypto- pool.fr -j DROP<span aria-hidden="true" class=
 <li>3306：Mysql</li>
 <li>5432：PostgreSQL</li>
 </ul>
-<p><strong>特殊服务类（未授权&#x2F;命令执行）</strong></p>
+<p><strong>特殊服务类（未授权/命令执行）</strong></p>
 <ul>
 <li>443：ssl 心脏滴血</li>
 <li>873：Rsync 未授权</li>
-<li>5984：CouchDB http：&#x2F;&#x2F;xxx:5984&#x2F;_utils&#x2F;</li>
+<li>5984：CouchDB http：//xxx:5984/_utils/</li>
 <li>6379：Redis 未授权</li>
 <li>7001、7002：Weblogic 默认弱口令</li>
 <li>8088：Hadoop Yarn 资源管理系统 REST API 存在未授权</li>
@@ -960,9 +960,9 @@ iptables -A OUTPUT -d xmr.crypto- pool.fr -j DROP<span aria-hidden="true" class=
 <li>50000：SAP 命令执行</li>
 <li>50070、50030 Hadoop 未授权访问</li>
 </ul>
-<p><strong>常用端口类（弱口令&#x2F;端口爆破）</strong></p>
+<p><strong>常用端口类（弱口令/端口爆破）</strong></p>
 <ul>
-<li>21：FTP 弱口令，匿名 anonymous&#x2F;空登录，以及 ms12-073</li>
+<li>21：FTP 弱口令，匿名 anonymous/空登录，以及 ms12-073</li>
 <li>25：SMTP 简单邮件传输服务器端口</li>
 <li>23：Telnet 的端口，Telnet 是一种可以远程登录并管理远程机器的服务</li>
 <li>22：ssh 端口，PcAnywhere 建立 TCP 和这一端口的连接可能是为了寻找 ssh，这一服务有许多弱点</li>
@@ -1012,18 +1012,18 @@ iptables -A OUTPUT -d xmr.crypto- pool.fr -j DROP<span aria-hidden="true" class=
 <h3 id="windows日志分析工具"><a href="#windows日志分析工具" class="headerlink" title="windows日志分析工具"></a>windows日志分析工具</h3><p>Log Parser、LogParser Lizard、Event Log Explorer</p>
 <h3 id="Linux日志分析技巧命令"><a href="#Linux日志分析技巧命令" class="headerlink" title="Linux日志分析技巧命令"></a>Linux日志分析技巧命令</h3><ol>
 <li><p>定位有多少IP在爆破主机的root帐号：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password for root"</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $11&#125;'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password for root"</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $11}'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>定位有哪些IP在爆破：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/secure<span class="token operator">|</span><span class="token function">grep</span> -E -o <span class="token string">"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>爆破用户名字典是什么？</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/secure<span class="token operator">|</span>perl -e <span class="token string">'while($_=&lt;>)&#123; /for(.*?) from/; print"$1\n";&#125;'</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span class="token operator">|</span><span class="token function">sort</span> -nr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/secure<span class="token operator">|</span>perl -e <span class="token string">'while($_=&lt;&gt;){ /for(.*?) from/; print"$1\n";}'</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span class="token operator">|</span><span class="token function">sort</span> -nr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>登录成功的IP有哪些</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $11&#125;'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $11}'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span>
 登录成功的日期、用户名、IP：
-<span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $1,$2,$3,$9,$11&#125;'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $1,$2,$3,$9,$11}'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>增加一个用户kali日志：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Jul <span class="token number">10</span> 00:12:15 localhost useradd<span class="token punctuation">[</span><span class="token number">2382</span><span class="token punctuation">]</span>: new group: <span class="token assign-left variable">name</span><span class="token operator">=</span>kali, <span class="token assign-left variable">GID</span><span class="token operator">=</span><span class="token number">1001</span>
@@ -1062,7 +1062,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <p>安全日志：<code>%SystemRoot%\System32\Winevt\Logs\Security.evtx</code></p>
 </li>
 <li><p>Linux</p>
-<p>日志默认存放位置：<code>/var/log/</code><br>查看日志配置情况：more &#x2F;etc&#x2F;rsyslog.conf</p>
+<p>日志默认存放位置：<code>/var/log/</code><br>查看日志配置情况：more /etc/rsyslog.conf</p>
 </li>
 </ul>
 <h3 id="常见中间件的配置文件路径"><a href="#常见中间件的配置文件路径" class="headerlink" title="常见中间件的配置文件路径"></a>常见中间件的配置文件路径</h3><ul>
@@ -1126,13 +1126,13 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 </ul>
 <p><strong>windows</strong></p>
 <ul>
-<li><code>C:\boot.ini</code> &#x2F;&#x2F;查看系统版本</li>
-<li><code>C:\Windows\System32\inetsrv\MetaBase.xml</code> &#x2F;&#x2F;IIS 配置文件</li>
-<li><code>C:\Windows\repair\sam</code> &#x2F;&#x2F;存储系统初次安装的密码</li>
-<li><code>C:\Program Files\mysql\my.ini</code> &#x2F;&#x2F;Mysql 配置</li>
-<li><code>C:\Program Files\mysql\data\mysql\user.MY D</code> &#x2F;&#x2F;Mysql root</li>
-<li><code>C:\Windows\php.ini</code> &#x2F;&#x2F;php 配置信息</li>
-<li><code>C:\Windows\my.ini</code> &#x2F;&#x2F;Mysql 配置信息</li>
+<li><code>C:\boot.ini</code> //查看系统版本</li>
+<li><code>C:\Windows\System32\inetsrv\MetaBase.xml</code> //IIS 配置文件</li>
+<li><code>C:\Windows\repair\sam</code> //存储系统初次安装的密码</li>
+<li><code>C:\Program Files\mysql\my.ini</code> //Mysql 配置</li>
+<li><code>C:\Program Files\mysql\data\mysql\user.MY D</code> //Mysql root</li>
+<li><code>C:\Windows\php.ini</code> //php 配置信息</li>
+<li><code>C:\Windows\my.ini</code> //Mysql 配置信息</li>
 </ul>
 <h3 id="如何分析被代理出来的数据流"><a href="#如何分析被代理出来的数据流" class="headerlink" title="如何分析被代理出来的数据流"></a>如何分析被代理出来的数据流</h3><p>分析数据包请求头中的 xff、referer 等收集有用的信息</p>
 <p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/245585.html">基于网络欺骗与浏览器指纹的WEB攻击溯源</a></p>
@@ -1161,7 +1161,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <h3 id="你能说明文件上传的原理吗？"><a href="#你能说明文件上传的原理吗？" class="headerlink" title="你能说明文件上传的原理吗？"></a>你能说明文件上传的原理吗？</h3><ul>
 <li>PHP：如果系统中存在可以上传文件的功能点，就可以上传后门脚本文件，通过一些方法绕过上传限制，如果能访问后门的的话，系统存在文件上传漏洞，可以借助后门执行命令</li>
 <li>Java：上传 jsp 代码</li>
-<li>Asp&#x2F;Aspx</li>
+<li>Asp/Aspx</li>
 <li>Python：因为脚本需要译后生成 pyc 字节码文件，所以不存在文件上传</li>
 </ul>
 <h3 id="文件上传攻击特征？"><a href="#文件上传攻击特征？" class="headerlink" title="文件上传攻击特征？"></a>文件上传攻击特征？</h3><p>能够上传文件的接口，应用程序对用户上传文件类型不校验或者校验不严格可绕过，导致任意类型文件上传，攻击者可上传 webshell 拿到服务器权限，在这个过程中攻击者必然会上传恶意脚本文件</p>
@@ -1176,7 +1176,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <li>-sT TCP (全)连接扫描，准确但留下大量日志记录</li>
 <li>-sS TCP SYN (半)扫描，速度较快，不会留下日志</li>
 <li>-sN null 扫描，标志位全为 0，不适用 Windows</li>
-<li>-sF FIN 扫描，标志位 FIN&#x3D;1，不适用 Windows</li>
+<li>-sF FIN 扫描，标志位 FIN=1，不适用 Windows</li>
 <li>-O 查看目标主机系统版本</li>
 <li>-sV 探测服务版本</li>
 <li>-A 全面扫描</li>
@@ -1239,7 +1239,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 </ol>
 <h3 id="非sql数据库"><a href="#非sql数据库" class="headerlink" title="非sql数据库"></a>非sql数据库</h3><p>Zookeeper，HBase、Redis、MongoDB、Couchbase、LevelDB</p>
 <h3 id="常见OA系统"><a href="#常见OA系统" class="headerlink" title="常见OA系统"></a>常见OA系统</h3><p>PHP：通达OA、泛微 Eoffice</p>
-<p>Java：泛微OA&#x2F;云桥、致远OA、蓝凌OA、用友OA</p>
+<p>Java：泛微OA/云桥、致远OA、蓝凌OA、用友OA</p>
 <p>ASP：启莱OA</p>
 <h3 id="横向越权漏洞的修复"><a href="#横向越权漏洞的修复" class="headerlink" title="横向越权漏洞的修复"></a>横向越权漏洞的修复</h3><p>横向越权：横向越权指的是攻击者尝试访问与他拥有相同权限的用户的资源</p>
 <p>纵向越权：纵向越权指的是一个低级别攻击者尝试访问高级别用户的资源</p>
@@ -1258,7 +1258,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 </ol>
 <h3 id="Linux下查找服务端口的命令"><a href="#Linux下查找服务端口的命令" class="headerlink" title="Linux下查找服务端口的命令"></a>Linux下查找服务端口的命令</h3><p>Linux下查找服务端口的命令？一句话查找80端口服务的命令？</p>
 <p>使用grep 命令 要使用 grep 命令在Linux 中查找指定服务的默认端口号，只需运行</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token operator">&lt;</span>port<span class="token operator">></span> /etc/services
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token operator">&lt;</span>port<span class="token operator">&gt;</span> /etc/services
 <span class="token function">grep</span> services /etc/services<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="https://s2.loli.net/2022/05/25/qZVnLyhwU1mDdXs.png" alt="image-20220107203438844"></p>
@@ -1303,7 +1303,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">SELINUX</span><span class="token operator">=</span>disabled<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>防火墙打开使用 <code>service iptables start</code> 或则<code>/etc/init.d/iptables start</code></p>
-<h3 id="iptables-工作在-TCP-x2F-IP-模型中的哪层？"><a href="#iptables-工作在-TCP-x2F-IP-模型中的哪层？" class="headerlink" title="iptables 工作在 TCP&#x2F;IP 模型中的哪层？"></a>iptables 工作在 TCP&#x2F;IP 模型中的哪层？</h3><p>网络层</p>
+<h3 id="iptables-工作在-TCP-x2F-IP-模型中的哪层？"><a href="#iptables-工作在-TCP-x2F-IP-模型中的哪层？" class="headerlink" title="iptables 工作在 TCP/IP 模型中的哪层？"></a>iptables 工作在 TCP/IP 模型中的哪层？</h3><p>网络层</p>
 <h3 id="日志分析ELK的使用和分析"><a href="#日志分析ELK的使用和分析" class="headerlink" title="日志分析ELK的使用和分析"></a>日志分析ELK的使用和分析</h3><blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21427267">https://www.zhihu.com/question/21427267</a></p>
 <ul>
@@ -1315,7 +1315,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <p>举例-阿里规范 用户历史命令记录</p>
 <p>缺点：安全性不够。使用x-pack实现安全认证及权限管理功能</p>
 <h3 id="awk-sed的使用"><a href="#awk-sed的使用" class="headerlink" title="awk sed的使用"></a>awk sed的使用</h3><h3 id="Log4j"><a href="#Log4j" class="headerlink" title="Log4j"></a>Log4j</h3><p>log4j 是 javaweb 的日志组件，用来记录 web 日志</p>
-<p>去指定下载文件的 url 在搜索框或者搜索的 url 里面，加上 ${jndi:ldap:&#x2F;&#x2F;127.0.0.1&#x2F;test} ，log4j 会对这串代码进行表达式解析，给 lookup 传递一个恶意的参数指定，参数指的是比如 ldap 不存在的资源 $ 是会被直接执行的。后面再去指定下载文件的 url，去下载我们的恶意文件。比如是 x.class 下载完成后，并且会执行代码块</p>
+<p>去指定下载文件的 url 在搜索框或者搜索的 url 里面，加上 ${jndi:ldap://127.0.0.1/test} ，log4j 会对这串代码进行表达式解析，给 lookup 传递一个恶意的参数指定，参数指的是比如 ldap 不存在的资源 $ 是会被直接执行的。后面再去指定下载文件的 url，去下载我们的恶意文件。比如是 x.class 下载完成后，并且会执行代码块</p>
 <p>修复：升级 Log4j 到最新版本，根据业务判断是否关闭 lookup</p>
 <h2 id="⬆️入侵检测-amp-防御"><a href="#⬆️入侵检测-amp-防御" class="headerlink" title="⬆️入侵检测&amp;防御"></a>⬆️入侵检测&amp;防御</h2><h3 id="WAF产品如何来拦截攻击？"><a href="#WAF产品如何来拦截攻击？" class="headerlink" title="WAF产品如何来拦截攻击？"></a>WAF产品如何来拦截攻击？</h3><p>Waf 产品有三种</p>
 <ol>
@@ -1385,7 +1385,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <h3 id="2-溯源反制手段"><a href="#2-溯源反制手段" class="headerlink" title="2.溯源反制手段"></a>2.溯源反制手段</h3><ul>
 <li>IP 定位技术<br>根据IP定位物理地址–代理 IP<br>溯源案例：通过 IP 端口扫描，反向渗透服务器进行分析，最终定位到攻击者相关信息</li>
 <li>ID 追踪术<br>ID 追踪术，搜索引擎、社交平台、技术论坛、社工库匹配<br>溯源案例：利用 ID 从技术论坛追溯邮箱，继续通过邮箱反追踪真实姓名，通过姓名找到相关简历信息</li>
-<li>网站 url<br>域名 Whois 查询–注册人姓名、地址、电话和邮箱 –域名隐私保护<br>溯源案例：通过攻击 IP 历史解析记录&#x2F;域名，对域名注册信息进行溯源分析</li>
+<li>网站 url<br>域名 Whois 查询–注册人姓名、地址、电话和邮箱 –域名隐私保护<br>溯源案例：通过攻击 IP 历史解析记录/域名，对域名注册信息进行溯源分析</li>
 <li>恶意样本分析<br>提取样本特征、用户名、ID、邮箱、C2 服务器等信息–同源分析<br>溯源案例：样本分析过程中，发现攻击者的个人 ID 和 QQ，成功定位到攻击者</li>
 <li>社交账号<br>基于 JSONP 跨域，获取攻击者的主机信息、浏览器信息、真实 IP 及社交信息等<br>利用条件：可以找到相关社交网站的 jsonp 接口泄露敏感信息，相关网站登录未注销</li>
 </ul>
@@ -1394,7 +1394,7 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <p>攻击目的：拿到权限、窃取数据、获取利益、DDOS 等<br>网络代理：代理 IP、跳板机、C2 服务器等<br>攻击手法：鱼叉式邮件钓鱼、Web渗透、水坑攻击、近源渗透、社会工程等</p>
 </li>
 <li><p>攻击者身份画像</p>
-<p>虚拟身份：ID、昵称、网名<br>真实身份：姓名、物理位置<br>联系方式：手机号、qq&#x2F;微信、邮箱<br>组织情况：单位名称、职位信息</p>
+<p>虚拟身份：ID、昵称、网名<br>真实身份：姓名、物理位置<br>联系方式：手机号、qq/微信、邮箱<br>组织情况：单位名称、职位信息</p>
 </li>
 </ul>
 <h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><ol>
@@ -1441,13 +1441,13 @@ Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span cla
 <p>目的 ip 地址：ip.dst1.1.1.1</p>
 </li>
 <li><p>过滤端口：</p>
-<p>过滤80端口：tcp.port &#x3D;&#x3D; 80</p>
-<p>源端口：tcp.srcport &#x3D;&#x3D; 80</p>
-<p>目的端：tcp.dstport &#x3D;&#x3D; 80</p>
+<p>过滤80端口：tcp.port == 80</p>
+<p>源端口：tcp.srcport == 80</p>
+<p>目的端：tcp.dstport == 80</p>
 </li>
 <li><p>协议过滤：直接输入协议名即可，如 http 协议 http</p>
 </li>
-<li><p>http 模式过滤：过滤 get&#x2F;post 包 httprequest.mothod &#x3D;&#x3D; “GET&#x2F;POST”</p>
+<li><p>http 模式过滤：过滤 get/post 包 httprequest.mothod == “GET/POST”</p>
 </li>
 </ul>
 <h3 id="常用取证工具"><a href="#常用取证工具" class="headerlink" title="常用取证工具"></a>常用取证工具</h3><p>Wireshark、xplico、 Volatility、 FastlR Collector、Autopsy、 Dumplt、 FTK Imager、Foremost、Scalpel、 Bulk_ exetractor 等</p>
