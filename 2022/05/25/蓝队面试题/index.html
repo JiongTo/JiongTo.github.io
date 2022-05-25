@@ -1,0 +1,2219 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="蓝队面试题, Hexo">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>蓝队面试题 | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">蓝队面试题</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-25
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>OCEAN’S 安全面试题整理系列文章：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/124329818">渗透测试&amp;网络&amp;CTF面试题整理</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/124329764?spm=1001.2014.3001.5501">PHP&amp;Java&amp;Py&amp;漏洞利用or运维面试题整理</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/123185212">红队面试题整理</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/q20010619/article/details/123015066">蓝队面试题整理（含回答）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Leezj9671/Pentest_Interview/blob/master/HR%E9%97%AE%E9%A2%98.md">HR问题</a></li>
+</ol>
+<h1 id="🅰️应急响应🛡️"><a href="#🅰️应急响应🛡️" class="headerlink" title="🅰️应急响应🛡️"></a>🅰️应急响应🛡️</h1><h2 id="⬆️宏观题"><a href="#⬆️宏观题" class="headerlink" title="⬆️宏观题"></a>⬆️宏观题</h2><h3 id="1-基本思路流程"><a href="#1-基本思路流程" class="headerlink" title="1.基本思路流程"></a>1.基本思路流程</h3><ol>
+<li>收集信息：收集客户信息和中毒主机信息，包括样本</li>
+<li>判断类型：判断是否是安全事件，何种安全事件，勒索、挖矿、断网、DoS 等等</li>
+<li>抑制范围：隔离使受害⾯不继续扩⼤</li>
+<li>深入分析：日志分析、进程分析、启动项分析、样本分析方便后期溯源</li>
+<li>清理处置：杀掉进程，删除文件，打补丁，删除异常系统服务，清除后门账号防止事件扩大，处理完毕后恢复生产</li>
+<li>产出报告：整理并输出完整的安全事件报告</li>
+</ol>
+<h3 id="2-Windows入侵排查思路"><a href="#2-Windows入侵排查思路" class="headerlink" title="2.Windows入侵排查思路"></a>2.Windows入侵排查思路</h3><ol>
+<li><p>检查系统账号安全</p>
+<ol>
+<li><p>查看服务器是否有弱口令，远程管理端口是否对公网开放（使用<code>netstat -ano </code>命令、或者问服务器管理员）</p>
+</li>
+<li><p><code>lusrmgr.msc </code>命令查看服务器是否存在可疑账号、新增账号，如有管理员群组的（Administrators）里的新增账户，如有，请立即禁用或删除掉</p>
+</li>
+<li><p>用 D 盾或者注册表中查看服务器是否存在隐藏账号、克隆账号</p>
+</li>
+<li><p>结合日志，查看管理员登录时间、用户名是否存在异常</p>
+<p>检查方法：Win+R 打开运行，输入“eventvwr.msc”，回车运行，打开“事件查看器”，导出 Windows 日志–安全，利用 Log Parser 进行分析</p>
+</li>
+</ol>
+</li>
+<li><p>检查异常端口、进程</p>
+<ol>
+<li><code>netstat -ano</code>检查端口连接情况，是否有远程连接、可疑连接</li>
+<li>任务管理器-进程</li>
+</ol>
+</li>
+<li><p>检查启动项、计划任务、服务</p>
+</li>
+<li><p>检查系统相关信息</p>
+<p>查看系统版本以及补丁信息</p>
+<p>查找可疑目录及文件</p>
+</li>
+<li><p>日志分析</p>
+</li>
+</ol>
+<h3 id="3-Linux入侵排查思路"><a href="#3-Linux入侵排查思路" class="headerlink" title="3.Linux入侵排查思路"></a>3.Linux入侵排查思路</h3><ol>
+<li><p>账号安全</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span>		查看当前登录用户（tty本地登陆 pts远程登录）
+w 		查看系统信息，想知道某一时刻用户的行为
+<span class="token function">uptime</span>	查看登陆多久、多少用户，负载<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">1</span>、用户信息文件/etc/passwd
+root:x:0:0:root:/root:/bin/bash
+account:password:<span class="token environment constant">UID</span>:GID:GECOS:directory:shell
+用户名：密码：用户ID：组ID：用户说明：家目录：登陆之后shell
+注意：无密码只允许本机登陆，远程不允许登陆
+
+<span class="token number">2</span>、影子文件/etc/shadow
+root:<span class="token variable">$6</span><span class="token variable">$oGs1PqhL2p3ZetrE</span><span class="token variable">$X7o7bzoouHQVSEmSgsYN5UD4</span>.kMHx6qgbTqwNVC5oOAouXvcjQSt.Ft7ql1WpkopY0UV9ajBwUt1DpYxTCVvI/:16809:0:99999:7:::
+用户名：加密密码：密码最后一次修改日期：两次密码的修改时间间隔：密码有效期：密码修改到期到的警告天数：密码过期之后的宽限天数：账号失效时间：保留<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>/etc/passwd</code> 存储一般的用户信息，任何人都可以访问；<code>/etc/shadow</code> 存储用户的密码信息，只有 root 用户可以访问</p>
+</li>
+<li><p>历史命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">通过 .bash_history 查看帐号执行过的系统命令
+<span class="token number">1</span>、root的历史命令 histroy
+<span class="token number">2</span>、打开 /home 各帐号目录下的 .bash_history，查看普通帐号的历史命令
+
+历史操作命令的清除：history -c
+但此命令并不会清除保存在文件中的记录，因此需要手动删除.bash_profile文件中的记录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>检查异常端口</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">netstat</span> -antlp<span class="token operator">|</span><span class="token function">more</span>
+查看下pid所对应的进程文件路径，
+运行ls -l /proc/<span class="token variable">$PID</span>/exe或file /proc/<span class="token variable">$PID</span>/exe（<span class="token variable">$PID</span> 为对应的pid 号）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>检查异常进程</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> pid<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>检查开机启动项</p>
+<p>开机启动配置文件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/rc.local
+/etc/rc.d/rc<span class="token punctuation">[</span><span class="token number">0</span>~6<span class="token punctuation">]</span>.d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>检查定时任务</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">crontab</span> -l 列出某个用户cron服务的详细内容
+Tips：默认编写的crontab文件会保存在 <span class="token punctuation">(</span>/var/spool/cron/用户名 例如: /var/spool/cron/root
+<span class="token function">crontab</span> -r 删除每个用户cront任务<span class="token punctuation">(</span>谨慎：删除所有的计划任务<span class="token punctuation">)</span>
+<span class="token function">crontab</span> -e 使用编辑器编辑当前的crontab文件
+如：*/1 * * * * <span class="token builtin class-name">echo</span> <span class="token string">"hello world"</span> <span class="token operator">>></span> /tmp/test.txt 每分钟写入文件
+<span class="token number">2</span>、利用anacron实现异步定时任务调度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>重点关注</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;var&#x2F;spool&#x2F;cron&#x2F;*
+&#x2F;etc&#x2F;crontab
+&#x2F;etc&#x2F;cron.d&#x2F;*
+&#x2F;etc&#x2F;cron.daily&#x2F;*
+&#x2F;etc&#x2F;cron.hourly&#x2F;*
+&#x2F;etc&#x2F;cron.monthly&#x2F;*
+&#x2F;etc&#x2F;cron.weekly&#x2F;
+&#x2F;etc&#x2F;anacrontab
+&#x2F;var&#x2F;spool&#x2F;anacron&#x2F;*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>检查服务</p>
+<p>chkconfig –list 命令，可以查看系统运行的服务</p>
+</li>
+<li><p>检查异常文件</p>
+</li>
+<li><p>检查系统日志</p>
+</li>
+</ol>
+<h3 id="Linux的登录日志查看文件"><a href="#Linux的登录日志查看文件" class="headerlink" title="Linux的登录日志查看文件"></a>Linux的登录日志查看文件</h3><ul>
+<li>日志默认存放位置：&#x2F;var&#x2F;log&#x2F;</li>
+<li>查看可登录的账户 cat&#x2F;etc&#x2F;passwd|grep ‘&#x2F;bin&#x2F;bash’</li>
+<li>查看所有用户最后的登录信息 lastlog</li>
+<li>查看用户最近登录信息 last 其中，&#x2F;var&#x2F;log&#x2F;wtmp 存储登录成功的信息、btmp 存储登录失败的信息、utmp 存储当前正在登录的信息</li>
+<li>查看当前用户登录系统情况 who</li>
+</ul>
+<h3 id="Linux常用排查命令"><a href="#Linux常用排查命令" class="headerlink" title="Linux常用排查命令"></a>Linux常用排查命令</h3><p>这个问题就是 linux 入侵排查排查的一部分</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1822210">https://cloud.tencent.com/developer/article/1822210</a></p>
+<p>系统信息</p>
+<ol>
+<li>查看当前系统状态 top</li>
+<li>操作系统信息 uname -a</li>
+<li>查看当前系统进程信息 ps</li>
+<li>查看历史命令 history</li>
+<li>列出本机所有的连接和监听的端口 netstat</li>
+<li>查看谁在使用某个端口 lsof</li>
+</ol>
+<p>用户登录</p>
+<ol>
+<li><p>查看当前用户登录系统情况 who</p>
+</li>
+<li><p>分析超级权限账户 awk-F： ‘{if（$3&#x3D;&#x3D;0）print $1}’&#x2F;etc&#x2F;passwd</p>
+</li>
+<li><p>查看可登录的账户 cat&#x2F;etc&#x2F;passwd|grep ‘&#x2F;bin&#x2F;bash’</p>
+</li>
+<li><p>查看用户错误的登录信息 lastb</p>
+</li>
+<li><p>查看所有用户最后的登录信息 lastlog</p>
+</li>
+<li><p>查看用户最近登录信息 last</p>
+<p>&#x2F;var&#x2F;log&#x2F; 其中，&#x2F;var&#x2F;log&#x2F;wtmp 存储登录成功的信息、btmp存储登录失败的信息、utmp存储当前正在登录的信息</p>
+</li>
+<li><p>查看空口令账户 awk-F： ‘length（$2）&#x3D;&#x3D;0 {print $1}’&#x2F;etc&#x2F;shadow</p>
+</li>
+</ol>
+<h3 id="Linux基线规范"><a href="#Linux基线规范" class="headerlink" title="Linux基线规范"></a>Linux基线规范</h3><p>每个公司有每个公司的基线规范体系，但是答题分为下列五个方面</p>
+<p><strong>账号管理和授权</strong></p>
+<ul>
+<li>检查特殊账号，是否存在空密码的账户和 root 权限账户</li>
+<li>禁用或删除无用账号</li>
+<li>添加口令策略:<code>/etc/login.defs</code>修改配置文件，设置过期时间、连续认证失败次数</li>
+<li>禁止 root 远程登录，限制root用户直接登录。</li>
+<li>检查 su 权限。<code>vi /etc/pam.d/su</code>添加<code>auth required pam_wheel.so group=test</code></li>
+</ul>
+<p><strong>服务</strong></p>
+<ul>
+<li>关闭不必要的服务</li>
+<li>SSH 服务安全<ul>
+<li>不允许 root 账号直接登录系统，<code>PermitRootLogin=no</code></li>
+<li>修改 SSH 使用的协议版本为 2</li>
+<li>修改允许密码错误次数（默认 6 次），<code>MaxAuthTries=3</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>文件系统</strong></p>
+<ul>
+<li>设置 umask 值 <code>vi /etc/profile</code> 添加行 <code>umask 027</code></li>
+<li>设置登录超时 <code>vi /etc/profile</code> 修改配置文件，将以 <code>TMOUT=</code> 开头的行注释，设置为 <code>TMOUT=180</code></li>
+</ul>
+<p><strong>日志</strong></p>
+<ul>
+<li><p>启用 syslogd 日志，配置日志目录权限，或者设置日志服务器</p>
+</li>
+<li><p>记录所有用户的登录和操作日志，通过脚本代码实现记录所有用户的登录操作日志，防止出现安全事件后无据可查</p>
+<p><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/help/zh/faq-detail/49809.htm">https://www.alibabacloud.com/help/zh/faq-detail/49809.htm</a></p>
+</li>
+</ul>
+<p><strong>IP 协议安全要求</strong></p>
+<ul>
+<li>远程登录取消 telnet 采用 ssh</li>
+<li>设置 &#x2F;etc&#x2F;hosts.allow 和 deny</li>
+<li>禁止 ICMP 重定向</li>
+<li>禁止源路由转发</li>
+<li>防 ssh 破解，iptables (对已经建立的所有链接都放行，限制每分钟连接 ssh 的次数)+ denyhost (添加 ip 拒绝访问)</li>
+</ul>
+<p><strong>Linux 安全基线检查</strong></p>
+<p>Linux：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1668982">https://cloud.tencent.com/developer/article/1668982</a></p>
+<h3 id="Windows-安全基线检查"><a href="#Windows-安全基线检查" class="headerlink" title="Windows 安全基线检查"></a>Windows 安全基线检查</h3><p>Windows：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1668937">https://cloud.tencent.com/developer/article/1668937</a></p>
+<p>主要包括五个方面：身份鉴别、访问控制、安全审计、资源控制、剩余信息保护</p>
+<ul>
+<li><p><strong>身份鉴别</strong></p>
+<p>更改缺省账户</p>
+<p>检查Guest用户是否禁用</p>
+<p>密码复杂性要求</p>
+<p>密码长度最小不能小于8位</p>
+</li>
+<li><p><strong>访问控制</strong></p>
+<p>共享账户检查</p>
+<p>远程关机授权</p>
+<p>本地关机</p>
+<p>授权帐户登陆</p>
+</li>
+<li><p><strong>安全审计</strong></p>
+<p>用户登录日志记录</p>
+<p>系统日志完备性检查</p>
+<p>登录超时管理</p>
+</li>
+<li><p><strong>资源控制</strong></p>
+<p>登录超时管理</p>
+<p>远程登录超时配置</p>
+</li>
+<li><p><strong>剩余信息保护</strong></p>
+<p>不显示上次的用户名</p>
+<p>关机前清除虚拟内存页面</p>
+<p>不启用可还原的加密来存储密码</p>
+</li>
+</ul>
+<h3 id="中间件基线规范（APACHE）"><a href="#中间件基线规范（APACHE）" class="headerlink" title="中间件基线规范（APACHE）"></a>中间件基线规范（APACHE）</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/help/zh/faq-detail/52981.htm">https://www.alibabacloud.com/help/zh/faq-detail/52981.htm</a></p>
+</blockquote>
+<p>配置</p>
+<ul>
+<li>账号</li>
+<li>授权</li>
+<li>日志</li>
+<li>session 过期时间（防ddos）</li>
+<li>绑定监听地址</li>
+</ul>
+<p>禁止</p>
+<ul>
+<li>目录权限</li>
+<li>访问外部文件</li>
+<li>CGI</li>
+<li>非法HTTP方法（PUT DELETE）</li>
+</ul>
+<p>隐藏</p>
+<ul>
+<li>服务版本号</li>
+<li>重定向错误页面</li>
+</ul>
+<p>删除</p>
+<ul>
+<li>配置文件</li>
+<li>默认安装的无用文件</li>
+</ul>
+<h3 id="中间件常见漏洞"><a href="#中间件常见漏洞" class="headerlink" title="中间件常见漏洞"></a>中间件常见漏洞</h3><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/192063.html">https://www.freebuf.com/articles/web/192063.html</a></p>
+<p><strong>（一） IIS</strong><br>1、PUT漏洞</p>
+<p>2、短文件名猜解</p>
+<p>3、远程代码执行</p>
+<p>4、解析漏洞</p>
+<p><strong>（二） Apache</strong><br>1、解析漏洞</p>
+<p>2、目录遍历</p>
+<p><strong>（三） Nginx</strong><br>1、文件解析</p>
+<p>2、目录遍历</p>
+<p>3、CRLF注入</p>
+<p>4、目录穿越</p>
+<p><strong>（四）Tomcat</strong><br>1、远程代码执行</p>
+<p>2、war后门文件部署</p>
+<p><strong>（五）jBoss</strong><br>1、反序列化漏洞</p>
+<p>2、war后门文件部署</p>
+<p><strong>（六）WebLogic</strong><br>1、反序列化漏洞</p>
+<p>2、SSRF</p>
+<p>3、任意文件上传</p>
+<p>4、war后门文件部署</p>
+<p><strong>（七）其它中间件相关漏洞</strong><br>1、FastCGI未授权访问、任意命令执行</p>
+<p>2、PHPCGI远程代码执行</p>
+<h3 id="Linux、Windows安全加固"><a href="#Linux、Windows安全加固" class="headerlink" title="Linux、Windows安全加固"></a>Linux、Windows安全加固</h3><p><strong>IIS 服务器应该做哪些方面的保护措施？</strong></p>
+<p>整理来源：<a target="_blank" rel="noopener" href="http://www.williamlong.info/archives/118.html">http://www.williamlong.info/archives/118.html</a></p>
+<ol>
+<li>保持 Windows 升级</li>
+<li>使用 IIS 防范工具</li>
+<li>移除缺省的 Web 站点</li>
+<li>如果你并不需要 FTP 和 SMTP 服务，请卸载它们</li>
+<li>有规则地检查你的管理员组和服务:</li>
+<li>严格控制服务器的写访问权限</li>
+<li>设置复杂的密码</li>
+<li>减少&#x2F;排除 Web 服务器上的共享</li>
+<li>禁用 TCP&#x2F;IP 协议中的 NetBIOS</li>
+<li>使用 TCP 端口阻塞</li>
+<li>仔细检查 .bat 和 .exe 文件：每周搜索一次 .bat</li>
+<li>管理 IIS 目录安全</li>
+<li>使用 NTFS 安全</li>
+<li>管理用户账户</li>
+<li>审计你的 Web 服务器</li>
+</ol>
+<p><strong>Linux系统安全加固需要注意的内容</strong></p>
+<ol>
+<li>关闭不必要的系统服务</li>
+<li>更改 SSH 默认端口</li>
+<li>禁止 root 用户远程 ssh 登录</li>
+<li>限制用户使用 su 命令切换 root</li>
+<li>密码复杂度策略</li>
+<li>检查密码重复使用次数限制</li>
+<li>检查是否存在空口令账号</li>
+<li>禁止同时按下 ctrl+alt+del 重启</li>
+<li>禁用 telnet 服务</li>
+</ol>
+<h3 id="框架漏洞-amp-常见命令注入漏洞？php-Strust2"><a href="#框架漏洞-amp-常见命令注入漏洞？php-Strust2" class="headerlink" title="框架漏洞&amp;常见命令注入漏洞？php? Strust2 ?"></a>框架漏洞&amp;常见命令注入漏洞？php? Strust2 ?</h3><ul>
+<li>Struts2 OGNL 注入</li>
+<li>weblogic</li>
+<li>fastjson</li>
+<li>TP5 代码执行</li>
+<li>laravel：debug mode 远程代码执行漏洞（CVE-2021-3129）</li>
+<li>Spring Expression Language SPEL 表达式注入</li>
+<li>Spring Security Oauth2 远程代码执行</li>
+<li><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/286666.html">Spring框架漏洞总结</a></li>
+</ul>
+<h3 id="常见安全工具、设备"><a href="#常见安全工具、设备" class="headerlink" title="常见安全工具、设备"></a>常见安全工具、设备</h3><p><strong>工具</strong></p>
+<ul>
+<li>端口及漏洞扫描：Namp、Masscan</li>
+<li>抓包：Wireshark，Burpsuite、Fiddler、HttpCanary</li>
+<li>Web自动化安全扫描：Nessus、Awvs、Appscan、Xray</li>
+<li>信息收集：Oneforall、hole</li>
+<li>漏洞利用：MSF、CS</li>
+<li>Webshell 管理：菜刀、蚁剑、冰蝎、哥斯拉</li>
+</ul>
+<p><strong>设备</strong></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.wgpsec.org/knowledge/base/safety.html">网络安全设备常识</a></p>
+<p>常见的 HW 设备有：公安部网防G01、K01、360网康&#x2F;网神防火墙、微步威胁情报、安恒云-Web应用防火墙（玄武盾）、默安蜜罐、知道创宇蜜罐、山石防火墙</p>
+<p><img src="https://s2.loli.net/2022/05/25/ie4h5RDb9mOgKcZ.png" alt="image-20211224223800578"></p>
+<p>即客户拥有物理的基础设施（自建机房、自购设备、网络）</p>
+<ul>
+<li><p>NGAF&#x2F;NGFW：下一代 Web 应用防火墙（Next Generation Application Firewall，<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/zhishi/edit-582196.html">通防火墙和下一代防火墙的区别</a>），聚合了以下功能</p>
+<ul>
+<li>IDS<ul>
+<li>HIDS：基于主机的入侵检测系统</li>
+<li>NIDS：基于网络的入侵检测系统</li>
+<li>HIDS+NIDS：基于混合数据源的入侵检测系统</li>
+</ul>
+</li>
+<li>IPS：入侵防御系统</li>
+<li>AV：反病毒系统</li>
+</ul>
+</li>
+<li><p>EDR：主机安全管理\终端检测和响应</p>
+<p>EDR 实时监测终端上发生的各类行为，采集终端运行状态，在后端通过大数据安全分析、机器学习、沙箱分析、行为分析、机器学习等技术，提供深度持续监控、威胁检测、高级威胁分析、调查取证、事件响应处置、追踪溯源等功能，可第一时间检测并发现恶意活动，包括已知和未知威胁，并快速智能地做出响应，全面赋予终端主动、积极的安全防御能力</p>
+<p>简单来说就是给内网环境中所有主机安装管理软件终端，可以在管理平台集中管理和数据分析过滤，基本所有安全厂商都有自己的 EDR 产品</p>
+</li>
+<li><p>运维审计和管理平台（堡垒机）</p>
+</li>
+<li><p>DAS：数据库安全审计平台</p>
+</li>
+<li><p>LAS：日志审计安全平台</p>
+</li>
+<li><p>AC：上网行为管理系统</p>
+</li>
+<li><p>伪装欺骗系统（蜜罐、蜜网）</p>
+</li>
+<li><p>SIP：安全态势感知平台</p>
+<p>这个算是让整套系统性能得到提升的灵魂了，定位为客户的安全大脑，是一个集检测、可视、响应处置于一体的大数据安全分析平台。产品以大数据分析为核心，支持主流的安全设备、网络设备、操作系统等多源数据接入，利用大数据、关联分析、告警降噪等技术，实现海量数据的统一挖掘分析</p>
+</li>
+</ul>
+<p><strong>云网络</strong></p>
+<p>云网络包括私有云和公有云</p>
+<ul>
+<li>云主机安全</li>
+<li>云防火墙</li>
+<li>云堡垒机</li>
+<li>云蜜罐</li>
+<li>云 DDOS 防护</li>
+<li>等等</li>
+</ul>
+<h3 id="绿盟设备"><a href="#绿盟设备" class="headerlink" title="绿盟设备"></a>绿盟设备</h3><ul>
+<li>堡垒机 SAS-H Series，堡垒机采用“物理旁路，逻辑串联”的部署思路</li>
+<li>绿盟威胁情报云 NTI <a target="_blank" rel="noopener" href="https://nti.nsfocus.com/">https://nti.nsfocus.com/</a></li>
+<li>抗拒绝服务攻击系统 ADS</li>
+<li>安全和漏洞管理 AIRO</li>
+<li>网络入侵防护系统 IDPS</li>
+<li>web 应用防火墙</li>
+</ul>
+<h3 id="你拿到的cnvd"><a href="#你拿到的cnvd" class="headerlink" title="你拿到的cnvd"></a>你拿到的cnvd</h3><h3 id="工作经历"><a href="#工作经历" class="headerlink" title="**工作经历"></a>**工作经历</h3><p>安全服务工程师</p>
+<p>参加渗透测试、地方服务、HW</p>
+<p>根据客户方要求对所给资产进行了详细细致的渗透测试。挖掘漏洞，发现漏洞的第一时间与客户方汇报，使客户方能够及时整改修补问题漏洞，防止造成漏洞危害扩大</p>
+<h3 id="攻防演练"><a href="#攻防演练" class="headerlink" title="攻防演练"></a>攻防演练</h3><p>攻防演练中担任什么角色</p>
+<h3 id="护网的分组和流程？"><a href="#护网的分组和流程？" class="headerlink" title="护网的分组和流程？"></a>护网的分组和流程？</h3><p>护网的分组是在领导小组之下分为防护检测组，综合研判组，应急溯源组。流程大致分为备战，临战，决战三个阶段</p>
+<p><strong>备战阶段</strong>，主要任务是进行两方面的操作，一是减少攻击面，即资产梳理，减少暴露面；二是排查风险点，即通过漏洞扫描，渗透测试，弱口令等进行自查</p>
+<p><strong>临战阶段</strong>，主要任务也大致可以分为两个部分，一是进行内部演练，发现疏忽处并进行相应整改；二是可以适当增加安全设备，比如WAF，IPS，IDS，SOC，堡垒机等</p>
+<p><strong>决战阶段</strong>，作为新人，主要就是坚守岗位，有应急日志就看自己能不能解决，不能就上报，服从上级安排，优化防护，持续整改</p>
+<h3 id="简历有护网经历，你能谈谈护网的情况吗"><a href="#简历有护网经历，你能谈谈护网的情况吗" class="headerlink" title="简历有护网经历，你能谈谈护网的情况吗"></a>简历有护网经历，你能谈谈护网的情况吗</h3><p>参加过护网蓝队，负责事件研判工作，主要使用 ips，ids 等设备做流量监控与日志分析工作判断安全事件是否为误判</p>
+<p>监控、研判、处置、溯源</p>
+<p>对安全管理中心发出的态势排查单进行排查，并将排查结果反馈给安全管理中心，对安全管理中心发出的封堵工单和解封工单进行对应的封堵与解封，每两小时反馈一次排查结果、设备巡检报告、封堵情况。查看呼池 DDOS 设备，记录并排查告警信息</p>
+<h3 id="蓝队研判"><a href="#蓝队研判" class="headerlink" title="蓝队研判"></a>蓝队研判</h3><p>研判工作要充分利用已有安全设备（需要提前了解客户的网络拓扑以及部署设备情况），分析其近期的设备告警，将全部流量日志（日志条件：源地址，目的地址，端口，事件名称，时间，规则 ID，发生 次数等）根据研判标准进行筛选（像挖矿、蠕虫、病毒、拒绝服务这类不太可能为攻击方发起的攻击的事件，直接过滤掉，减少告警数量），一般情况下，真实攻击不可能只持续一次，它一定是长时间、周期性、多 IP 的进行攻击</p>
+<p>对于告警结合威胁情报库如：微步、奇安信威胁情报中心、<strong>绿盟威胁情报云</strong>等对于流量日志的原 IP 地址进行分析，判断其是否为恶意攻击，推荐使用微步的插件，如果确认为攻击行为或者不能确认是否为攻击行为，进行下一步操作，在之前准备好的表格中查找 IP 是否为客户内网部署的设备，如果不是，继续进行下一步，在事件上报平台查看是否有其他人提交过，如果没有，则上报</p>
+<p>然后根据流量日志，对请求数据包和返回数据包分析判断其是否为误报，需要留意 X-Forwarded-For（简称XFF）和 x-real-ip 可以了解些 webshell 工具的流量特征，尤其是免杀 webshell，有可能不会被设备识别</p>
+<p>最后上报事件时，尽可能提供完整的截图，包括源 ip、目的ip，请求包请求体，响应包响应体等重要信息，以方便后续人员研判溯源</p>
+<blockquote>
+<p>注：不要任意忽略内网告警，适当情况下可以往前推排查时间</p>
+</blockquote>
+<h3 id="蓝队组成"><a href="#蓝队组成" class="headerlink" title="蓝队组成"></a>蓝队组成</h3><p>蓝队的主要工作包括前期安全检查、整改与加固，演习期间进行网络安全监测、预警、分析、验证、处置，后期复盘总结现有防护工作中的不足之处，为后续常态化的网络安全防护措施提供优化依据</p>
+<p>监控、研判、处置、溯源</p>
+<h3 id="SQL注入检测"><a href="#SQL注入检测" class="headerlink" title="SQL注入检测"></a>SQL注入检测</h3><p>SQL注入攻击检测可根据入侵事件发生的前后进行区分，在入侵前可以对 Payload 进行检测等方式以预防 SQL 注入攻击。在入侵检测后可以通过对数据库、IIS 日志等进行检查以进行判断</p>
+<p>传统的SQL注入检测方法通常根据经验提取特征，然后基于规则库匹配的方法来检测是否为 SQL 注入语句，其设计一般较为复杂，且规则模式更新频繁，在此采用机器学习的方式尝试对 SQL 注入语句进行检测</p>
+<h3 id="DDOS-CC应急思路以及如何防范"><a href="#DDOS-CC应急思路以及如何防范" class="headerlink" title="DDOS CC应急思路以及如何防范"></a>DDOS CC应急思路以及如何防范</h3><p>目前对于低网络层的 DDoS 攻击有一些有效的防护手段，如丢弃第一次 SYN 包，上流量防护设备，上 WAF 封禁地址等</p>
+<p>比较难缠的是第七层，第八层的 CC 攻击，它会找到目标网站上比较消耗资源的关键位置，重复发起攻击以消耗 CPU&#x2F;内存&#x2F;数据库&#x2F;IO 等资源，目前的应付手段有：</p>
+<ol>
+<li>优化资源消耗高位置的代码</li>
+<li>增加硬件设备</li>
+<li>上云</li>
+<li>购买专业安全公司的安全服务</li>
+<li>除此之外，隐藏服务器的真实 IP、上云 WAF、CDN、 负载均衡等设备，或者暂时将域名解析到公安网警网站等也是可以作为选择方案</li>
+</ol>
+<ul>
+<li>网络设备设施<ul>
+<li>拼带宽，加大带宽，但是成本太高</li>
+<li>使用硬件防火墙</li>
+<li>选用高性能设备</li>
+</ul>
+</li>
+<li>抗 D 思想和方案<ul>
+<li>负载均衡</li>
+<li>花钱买流量清洗服务</li>
+<li>CDN：web 层，比如 cc 攻击</li>
+<li>分布式集群防御</li>
+<li>高防：防大部分攻击，udp、大型的 cc 攻击</li>
+</ul>
+</li>
+<li>预防为主<ul>
+<li>系统漏洞</li>
+<li>系统资源优化</li>
+<li>过滤不必要的服务和端口</li>
+<li>限制特定流量：检查访问来源做适当限制</li>
+</ul>
+</li>
+</ul>
+<h3 id="挖矿病毒判断-amp-挖矿常见手段-amp-处理"><a href="#挖矿病毒判断-amp-挖矿常见手段-amp-处理" class="headerlink" title="挖矿病毒判断&amp;挖矿常见手段&amp;处理"></a>挖矿病毒判断&amp;挖矿常见手段&amp;处理</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139019250">挖矿病毒，自己搜搜</a></p>
+<p>挖矿木马占用系统资源进行挖矿行为，一般电脑会有以下特征</p>
+<ol>
+<li>系统响应缓慢</li>
+<li>CPU&#x2F;显卡使用率过高</li>
+<li>内存&#x2F;带宽占用高</li>
+</ol>
+<p>登录进可疑主机后，可以通过以下方式确认挖矿木马（即入侵排查流程）</p>
+<ol>
+<li>查看进程（系统命令 ps、Is 有可能被替换）</li>
+<li>检查日志、检查系统用户</li>
+<li>发现异常文件</li>
+</ol>
+<p><strong>挖矿常用手段</strong></p>
+<ol>
+<li>未授权访问或弱口令：Redis 未授权访问、Docker API 未授权访问、Hadoop Yarn 未授权访问、NFS 未授权访问、Rsync 弱口令、PostgreSQL 弱口令、Tomcat 弱口令、SSH 弱口令、Telnet 弱口令、Windows 远程桌面弱口令</li>
+<li>远程命令执行漏洞：WebLogic XML 反序列化漏洞、Jenkins 反序列化、Jboss 远程代码执行、Spring 远程代码执行、ElasticSearch 命令执行、永恒之蓝、Struts2 系列漏洞、常见 CMS 的远程命令执行漏洞</li>
+<li>新爆的高危漏洞：一般每次爆发新的高危漏洞，都会紧跟一波大规模的全网扫描利用和挖矿</li>
+</ol>
+<p><strong>清除挖矿木马</strong></p>
+<p><strong>原因排查</strong></p>
+<p>一旦发现服务器被挖矿，应该首先查看挖矿进程所属的用户，根据挖矿进程的运行用户去排查该用户下是否还运行着其它进程，确定这些进程是否有上述经常被黑客利用的漏洞。如果有常见的漏洞，则应该重点对此进行排查找到原因</p>
+<p><strong>清除木马</strong></p>
+<ol>
+<li><p>及时隔离主机</p>
+<p>部分带有蠕虫功能的挖矿木马在取得本机的控制权后，会以本机为跳板机，对同一局域网内的其他主机进行已知漏洞的扫描和进一步利用， 所以发现挖矿现象后，在不影响业务的前提下应该及时隔离受感染主机，然后进行下一步分析</p>
+</li>
+<li><p>删除文件、阻断与矿池通讯</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">iptables -A INPUT -S xmr.crypto- pool.fr -j DROP
+iptables -A OUTPUT -d xmr.crypto- pool.fr -j DROP<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>清除定时任务</p>
+<p>大部分挖矿进程会在受感染主机中写入定时任务来完成程序的驻留，当安全人员只清除挖矿木马时，定时任务会再次从服务器下载挖矿进程或者直接执行挖矿脚本，导致挖矿进程清除失败</p>
+</li>
+<li><p>清除启动项</p>
+<p>有的挖矿进程为了实现长期驻留，会向系统中添加启动项来确保系统重启后挖矿进程还能重新启动，所以在清除时还应该关注启动项中的内容如果有可疑的启动项，也应该进行排查，确认是挖矿进程后，对其进行清除</p>
+</li>
+<li><p>kill 挖矿进程</p>
+<p>对于单进程挖矿程序，直接结束挖矿进程即可。但是对于大多数的挖矿进程，如果挖矿进程有守护进程，应先杀死守护进程再杀死挖矿进程，避免清除不彻底<br>在实际的清除工作中，应找到本机上运行的挖矿脚本，根据脚本的执行流程确定木马的驻留方式， 并按照顺序进行清除， 避免清除不彻底</p>
+</li>
+<li><p>清除公钥文件</p>
+<p>在用户 home 目录的 .ssh 目录下放置 authoruzed_keys 文件，从而免密登录该机器也是一种常见的保持服务器控制权的手段。在排查过程中应该查看该文件中是否有可疑公钥信息，有的话直接删除，避免攻击者再次免密登录该主机</p>
+</li>
+</ol>
+<h3 id="服务器存在webshell，如何处理？"><a href="#服务器存在webshell，如何处理？" class="headerlink" title="服务器存在webshell，如何处理？"></a>服务器存在webshell，如何处理？</h3><p>网站被植入 webshell，意味着网站存在可利用的高危漏洞，攻击者通过利用漏洞入侵网站，写入 webshell 接管网站的控制权</p>
+<ol>
+<li>及时隔离主机</li>
+<li>定位事件范围，查看文件 webshell 文件的创建时间，对 webshell 取证样本</li>
+<li>通过创建时间结合日志分析可疑行为，以及启动用户的其他进程确定漏洞</li>
+<li>清除 webshell 及残留文件，修复漏洞，参考上题</li>
+</ol>
+<h3 id="排查-shell-应该用什么命令来进行排查"><a href="#排查-shell-应该用什么命令来进行排查" class="headerlink" title="排查 shell 应该用什么命令来进行排查"></a>排查 shell 应该用什么命令来进行排查</h3><p>find 命令</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">find</span> /var/www/html -name <span class="token string">"*.php"</span> <span class="token operator">|</span><span class="token function">xargs</span> <span class="token function">egrep</span> <span class="token string">'assert|eval|phpinfo\(\)|\(base64_decoolcode|shell_exec|passthru|file_put_contents\(\.\*\$|base64_decode\('</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="如何检测webshell"><a href="#如何检测webshell" class="headerlink" title="如何检测webshell"></a>如何检测webshell</h3><p><strong>主机层面</strong></p>
+<ul>
+<li><p>静态检测</p>
+<p>静态检测通过匹配特征码，特征值，危险函数函数来查找 webshell 的方法，只能查找已知的 webshell</p>
+</li>
+<li><p>动态检测</p>
+<p>webshell 传到服务器了，在执行函数时这些对于系统调用、系统配置、数据库、文件的操作动作都是可以作为判断依据</p>
+</li>
+<li><p>日志检测</p>
+<p>使用 webshell 一般不会在系统日志中留下记录，但是会在网站的 web 日志中留下 webshell 页面的访问数据和数据提交记录</p>
+</li>
+<li><p>语法检测</p>
+<p>语法语义分析形式，是根据 php 语言扫描编译的实现方式，进行剥离代码、注释，分析变量、函数、字符串、语言结构的分析方式，来实现关键危险函数的捕捉方式这样可以完美解决漏报的情况但误报上</p>
+</li>
+</ul>
+<p><strong>流量层面</strong></p>
+<h3 id="Webshell管理工具的流量特征"><a href="#Webshell管理工具的流量特征" class="headerlink" title="Webshell管理工具的流量特征"></a>Webshell管理工具的流量特征</h3><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/213905.html">冰蝎动态二进制加密WebShell特征分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/column/204796.html">常见WebShell客户端的流量特征及检测思路</a></p>
+<p><strong>菜刀</strong></p>
+<p>菜刀 webshell 只使用了 url 编码 + base64 编码</p>
+<p>shell 特征就是传输参数名为 z0，还存在<code>int_set(&quot;display_erros&quot;,&quot;0&quot;)</code>字符串特征</p>
+<p><strong>蚁剑</strong></p>
+<p>默认的蚁剑 shell，连接时会请求两次，其请求体只是经过 url 编码，其流量中也存在和蚁剑一样的代码</p>
+<p>第一次请求，关闭报错和 magic_quotes，接下来去获取主机的信息</p>
+<p>第二次请求，会把主机目录列出来</p>
+<p><strong>冰蝎2.0</strong></p>
+<p>使用 aes 加密发起三次请求</p>
+<p>第一次请求服务端产生密钥写入 session，session 和当前会话绑定，不同的客户端的密钥也是不同的</p>
+<p>第二次请求是为了获取 key，第三次使用 key 的 aes 加密进行通信</p>
+<p><strong>冰蝎3.0</strong></p>
+<p>使用 aes 加密发起两次请求</p>
+<p>3.0 分析流量发现相比 2.0 少了动态密钥的获取的请求，不再使用随机生成 key，改为取连接密码的 md5 加密值的前 16 位作为密钥</p>
+<p>一次请求为判断是否可以建立连接，少了俩次 get 获取冰蝎动态密钥的行为，第二次发送 phpinfo 等代码执行，获取网站的信息</p>
+<p><strong>哥斯拉</strong></p>
+<p>支持 n 种加密</p>
+<p>采用了和冰蝎 3.0 一样的密钥交换方式，哥斯拉建立连接时会发起三次请求，第一次请求数据超级长，建立 session，第二三次请求确认连接</p>
+<h3 id="常见端口漏洞"><a href="#常见端口漏洞" class="headerlink" title="常见端口漏洞"></a>常见端口漏洞</h3><p><strong>数据库类（扫描弱口令）</strong></p>
+<ul>
+<li>1433：MSSQL</li>
+<li>1521：Oracle</li>
+<li>3306：Mysql</li>
+<li>5432：PostgreSQL</li>
+</ul>
+<p><strong>特殊服务类（未授权&#x2F;命令执行）</strong></p>
+<ul>
+<li>443：ssl 心脏滴血</li>
+<li>873：Rsync 未授权</li>
+<li>5984：CouchDB http：&#x2F;&#x2F;xxx:5984&#x2F;_utils&#x2F;</li>
+<li>6379：Redis 未授权</li>
+<li>7001、7002：Weblogic 默认弱口令</li>
+<li>8088：Hadoop Yarn 资源管理系统 REST API 存在未授权</li>
+<li>8161：Apache ActiveMQ 未授权、弱口令，put 文件上传，move 文件移动</li>
+<li>9200、9300：elasticsearch 命令执行</li>
+<li>11211：Memcache 未授权，telnet ip 就可以获得服务器敏感信息</li>
+<li>27017、27018：Mongodb 未授权</li>
+<li>50000：SAP 命令执行</li>
+<li>50070、50030 Hadoop 未授权访问</li>
+</ul>
+<p><strong>常用端口类（弱口令&#x2F;端口爆破）</strong></p>
+<ul>
+<li>21：FTP 弱口令，匿名 anonymous&#x2F;空登录，以及 ms12-073</li>
+<li>25：SMTP 简单邮件传输服务器端口</li>
+<li>23：Telnet 的端口，Telnet 是一种可以远程登录并管理远程机器的服务</li>
+<li>22：ssh 端口，PcAnywhere 建立 TCP 和这一端口的连接可能是为了寻找 ssh，这一服务有许多弱点</li>
+<li>53：dns 端口</li>
+<li>139：属于 TCP 协议，是为 NetBIOS Session Service 提供的，主要提供 Windows 文件和打印机共享以及 Unix 中的 Samba 服务</li>
+<li>445：网络共享 smb 服务，尝试利用 ms08067，ms17010 等以及 IPC$ 攻击手段</li>
+<li>2601、2604：zebra 路由，默认密码 zebra</li>
+</ul>
+<h3 id="三次握手与四次挥手"><a href="#三次握手与四次挥手" class="headerlink" title="三次握手与四次挥手"></a>三次握手与四次挥手</h3><p><a target="_blank" rel="noopener" href="https://www.eet-china.com/mp/a44399.html">https://www.eet-china.com/mp/a44399.html</a></p>
+<p>背景：TCP 位于传输层，作用是提供可靠的字节流服务，为了准确无误地将数据送达目的地，TCP 协议采纳三次握手四次挥手策略</p>
+<p><strong>三次握手（three-way handshaking）</strong></p>
+<p>TCP 三次握手，其实就是 TCP 应用在发送数据前，通过 TCP 协议跟通信对方协商好连接信息，建立起 TCP 的连接关系</p>
+<ol>
+<li>第一次握手：客户端发送 <code>SYN</code> 报文，并进入 <code>SYN_SENT</code> 状态，等待服务器的确认</li>
+<li>第二次握手：服务器收到 <code>SYN</code> 报文，需要给客户端发送 <code>ACK</code> 确认报文，同时服务器也要向客户端发送一个 <code>SYN</code> 报文，所以也就是向客户端发送 <code>SYN + ACK</code> 报文，此时服务器进入 <code>SYN_RCVD</code> 状态</li>
+<li>第三次握手：客户端收到 <code>SYN + ACK</code> 报文，向服务器发送确认包，客户端进入 <code>ESTABLISHED</code> 状态。待服务器收到客户端发送的 <code>ACK</code> 包也会进入 <code>ESTABLISHED</code> 状态，完成三次握手</li>
+</ol>
+<p><strong>四次挥手（Four-Way-Wavehand）</strong></p>
+<p>当我们的应用程序不需要数据通信了，就会发起断开 TCP 连接。建立一个连接需要三次握手，而终止一个连接需要经过四次挥手</p>
+<ol>
+<li>第一次挥手：客户端发送一个 <code>FIN</code>，用来关闭客户端到服务端的数据传送，客户端进入 <code>FIN_WAIT_1</code> 状态</li>
+<li>第二次挥手：服务端收到 <code>FIN</code> 后，发送一个 <code>ACK</code> 给客户端，确认序号为收到序号 +1（与SYN相同，一个FIN占用一个序号），服务端进入 <code>CLOSE_WAIT</code> 状态</li>
+<li>第三次挥手：服务端发送一个 <code>FIN</code>，用来关闭服务端到 客户端的数据传送，服务端进入 <code>LAST_ACK</code> 状态</li>
+<li>第四次挥手：客户端收到 <code>FIN</code> 后，客户端进入 <code>TIME_WAIT</code> 状态，接着发送一个 <code>ACK</code> 给服务端，确认序号为收到序号 +1，服务端进入 <code>CLOSED</code> 状态，完成四次挥手</li>
+</ol>
+<h3 id="一个大范围影响的0day被曝光，作为甲方安全工程师，应该如何处理-★★"><a href="#一个大范围影响的0day被曝光，作为甲方安全工程师，应该如何处理-★★" class="headerlink" title="一个大范围影响的0day被曝光，作为甲方安全工程师，应该如何处理(★★)"></a>一个大范围影响的0day被曝光，作为甲方安全工程师，应该如何处理(★★)</h3><ol>
+<li>首先是评估 0day 对自身系统的影响（这部分评估需要根据漏洞利用的利用点、是否需要交互、是否会影响系统的 CIA，是否有在野利用 poc，影响资产是否暴露在公网等很多因素决定，详情可以参考 CVSS ）</li>
+<li>如果确定有影响的话且有 poc，第一件事是先分析 poc 执行后会在什么地方留下痕迹，我们有什么样的设备去采集这些痕迹所留下的数据，比如说 ntlm relay 这种，可以考虑从 Windows 事件日志当中 event_id 等于 4769 的事件入手编写对应的规则，这样的话可以利用 SIEM 或者实时日志分析平台跑起来，可以建立起初步的感知防线，后期触发告警，人肉运营也可以快速止损</li>
+<li>日常建立完整的纵深防御体系，不要依赖于某一道防线</li>
+</ol>
+<h3 id="服务器操作系统的安全防范？"><a href="#服务器操作系统的安全防范？" class="headerlink" title="服务器操作系统的安全防范？"></a>服务器操作系统的安全防范？</h3><ol>
+<li>停止运行不需要的软件（很可能成为外部攻击的入口）</li>
+<li>定期实施漏洞防范措施（选定软件时确认软件的升级状况，确定打补丁方式，关注各种漏洞信息，确认漏洞后调查补丁状况以及防范对策，并制定对应计划）</li>
+<li>对不需要对外公开的端口或者服务加以访问限制（通过端口扫描确认各端口服务状态）</li>
+<li>提高认证强度</li>
+</ol>
+<h3 id="怎么发现有没有被攻击"><a href="#怎么发现有没有被攻击" class="headerlink" title="怎么发现有没有被攻击"></a>怎么发现有没有被攻击</h3><p>攻击判断可以建立在设备的基础上，利用设备的告警，如果没有设备的话可以参考以下</p>
+<p>网站被攻击：网站被跳转到赌博网站，网站首页被篡改，百度快照被改，网站被植入 webshell 脚本木马，网站被 DDOS、CC 压力攻击</p>
+<p>服务器被黑：服务器系统中木马病毒，服务器管理员账号密码被改，服务器被攻击者远程控制，服务器的带宽向外发包，服务器被流量攻击，ARP攻击（目前这种比较少了，现在都是基于阿里云，百度云，腾讯云等云服务器）</p>
+<p>对登录记录、系统日志、web 日志等进行分析</p>
+<h2 id="⬆️细节题"><a href="#⬆️细节题" class="headerlink" title="⬆️细节题"></a>⬆️细节题</h2><h3 id="你能大概说一下，比如数据包或者日志，你的分析思路是什么，以及你会用到哪些工具或者那些网站进行查询？"><a href="#你能大概说一下，比如数据包或者日志，你的分析思路是什么，以及你会用到哪些工具或者那些网站进行查询？" class="headerlink" title="你能大概说一下，比如数据包或者日志，你的分析思路是什么，以及你会用到哪些工具或者那些网站进行查询？"></a>你能大概说一下，比如数据包或者日志，你的分析思路是什么，以及你会用到哪些工具或者那些网站进行查询？</h3><p>用流量监测的安全设备，比如天眼，查看报文，分析报文里和 host 和网站目录路径，查看是否可疑，使用微步查询 host 是否为恶意，使用 wireshark 对数据包深度分析</p>
+<p>看一下请求的网站路径，源 IP 与目的 IP 地址，host 字段的值以及发包内容等</p>
+<p>工具有 wireshark，网站的话微步在线等威胁情报中心</p>
+<h3 id="文件上传和命令执行，有看过相关日志吗"><a href="#文件上传和命令执行，有看过相关日志吗" class="headerlink" title="文件上传和命令执行，有看过相关日志吗"></a>文件上传和命令执行，有看过相关日志吗</h3><p>文件：可能在系统有上传功能或者有文本编辑器，看一下是否有 base64 加密或者 url 加密，解码验证一下是否有恶意代码</p>
+<p>系统日志：有没有 web 容器做了一些危险行为，比如 bash 反弹 shell 等</p>
+<p>网络应用日志：有没有异常的网站文件，类似 webshell 等，<strong>就有可能是命令执行</strong></p>
+<h3 id="windows日志分析工具"><a href="#windows日志分析工具" class="headerlink" title="windows日志分析工具"></a>windows日志分析工具</h3><p>Log Parser、LogParser Lizard、Event Log Explorer</p>
+<h3 id="Linux日志分析技巧命令"><a href="#Linux日志分析技巧命令" class="headerlink" title="Linux日志分析技巧命令"></a>Linux日志分析技巧命令</h3><ol>
+<li><p>定位有多少IP在爆破主机的root帐号：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password for root"</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $11&#125;'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>定位有哪些IP在爆破：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/secure<span class="token operator">|</span><span class="token function">grep</span> -E -o <span class="token string">"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>爆破用户名字典是什么？</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Failed password"</span> /var/log/secure<span class="token operator">|</span>perl -e <span class="token string">'while($_=&lt;>)&#123; /for(.*?) from/; print"$1\n";&#125;'</span><span class="token operator">|</span><span class="token function">uniq</span> -c<span class="token operator">|</span><span class="token function">sort</span> -nr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>登录成功的IP有哪些</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $11&#125;'</span> <span class="token operator">|</span> <span class="token function">sort</span> <span class="token operator">|</span> <span class="token function">uniq</span> -c <span class="token operator">|</span> <span class="token function">sort</span> -nr <span class="token operator">|</span> <span class="token function">more</span>
+登录成功的日期、用户名、IP：
+<span class="token function">grep</span> <span class="token string">"Accepted "</span> /var/log/secure <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $1,$2,$3,$9,$11&#125;'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>增加一个用户kali日志：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Jul <span class="token number">10</span> 00:12:15 localhost useradd<span class="token punctuation">[</span><span class="token number">2382</span><span class="token punctuation">]</span>: new group: <span class="token assign-left variable">name</span><span class="token operator">=</span>kali, <span class="token assign-left variable">GID</span><span class="token operator">=</span><span class="token number">1001</span>
+Jul <span class="token number">10</span> 00:12:15 localhost useradd<span class="token punctuation">[</span><span class="token number">2382</span><span class="token punctuation">]</span>: new user: <span class="token assign-left variable">name</span><span class="token operator">=</span>kali, <span class="token assign-left variable"><span class="token environment constant">UID</span></span><span class="token operator">=</span><span class="token number">1001</span>, <span class="token assign-left variable">GID</span><span class="token operator">=</span><span class="token number">1001</span>,
+<span class="token assign-left variable">home</span><span class="token operator">=</span>/home/kali
+, <span class="token assign-left variable">shell</span><span class="token operator">=</span>/bin/bash
+Jul <span class="token number">10</span> 00:12:58 localhost passwd: pam_unix<span class="token punctuation">(</span>passwd:chauthtok<span class="token punctuation">)</span>: password changed <span class="token keyword">for</span> kali
+<span class="token comment">#grep "useradd" /var/log/secure</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>删除用户kali日志：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Jul <span class="token number">10</span> 00:14:17 localhost userdel<span class="token punctuation">[</span><span class="token number">2393</span><span class="token punctuation">]</span>: delete user <span class="token string">'kali'</span>
+Jul <span class="token number">10</span> 00:14:17 localhost userdel<span class="token punctuation">[</span><span class="token number">2393</span><span class="token punctuation">]</span>: removed group <span class="token string">'kali'</span> owned by <span class="token string">'kali'</span>
+Jul <span class="token number">10</span> 00:14:17 localhost userdel<span class="token punctuation">[</span><span class="token number">2393</span><span class="token punctuation">]</span>: removed shadow group <span class="token string">'kali'</span> owned by <span class="token string">'kali'</span>
+<span class="token comment"># grep "userdel" /var/log/secure</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>su切换用户：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Jul <span class="token number">10</span> 00:38:13 localhost su: pam_unix<span class="token punctuation">(</span>su-l:session<span class="token punctuation">)</span>: session opened <span class="token keyword">for</span> user good by
+root<span class="token punctuation">(</span>uid<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+sudo授权执行:
+<span class="token function">sudo</span> -l
+Jul <span class="token number">10</span> 00:43:09 localhost sudo: good <span class="token builtin class-name">:</span> <span class="token assign-left variable">TTY</span><span class="token operator">=</span>pts/4 <span class="token punctuation">;</span> <span class="token assign-left variable"><span class="token environment constant">PWD</span></span><span class="token operator">=</span>/home/good <span class="token punctuation">;</span> <span class="token assign-left variable"><span class="token environment constant">USER</span></span><span class="token operator">=</span>root <span class="token punctuation">;</span>
+<span class="token assign-left variable">COMMAND</span><span class="token operator">=</span>/sbin/shutdown -r now<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<h3 id="给你一个比较大的日志，应该如何分析"><a href="#给你一个比较大的日志，应该如何分析" class="headerlink" title="给你一个比较大的日志，应该如何分析"></a>给你一个比较大的日志，应该如何分析</h3><ul>
+<li>攻击规则匹配，通过正则匹配日志中的攻击请求</li>
+<li>统计方法，统计请求出现次数，次数少于同类请求平均次数则为异常请求</li>
+<li>白名单模式，为正常请求建立白名单，不在名单范围内则为异常请求</li>
+<li>HMM 模型，类似于白名单，不同点在于可对正常请求自动化建立模型，从而通过正常模型找出不匹配者则为异常请求</li>
+<li>借助日志分析工具，如 LogForensics 腾讯实验室 <a target="_blank" rel="noopener" href="https://security.tencent.com/index.php/opensource/detail/15">https://security.tencent.com/index.php/opensource/detail/15</a></li>
+</ul>
+<h3 id="Windows在应急响应中的安全日志以及对应场景"><a href="#Windows在应急响应中的安全日志以及对应场景" class="headerlink" title="Windows在应急响应中的安全日志以及对应场景"></a>Windows在应急响应中的安全日志以及对应场景</h3><h3 id="设备误报如何处理"><a href="#设备误报如何处理" class="headerlink" title="设备误报如何处理"></a>设备误报如何处理</h3><p>（日志）</p>
+<h3 id="Windows和Linux的日志文件放在哪里"><a href="#Windows和Linux的日志文件放在哪里" class="headerlink" title="Windows和Linux的日志文件放在哪里"></a>Windows和Linux的日志文件放在哪里</h3><ul>
+<li><p>Windows 主要有以下三类日志记录系统事件：应用程序日志、系统日志和安全日志</p>
+<p>系统日志：<code> %SystemRoot%\System32\Winevt\Logs\System.evtx</code></p>
+<p>应用程序日志：<code>%SystemRoot%\System32\Winevt\Logs\Application.evtx</code></p>
+<p>安全日志：<code>%SystemRoot%\System32\Winevt\Logs\Security.evtx</code></p>
+</li>
+<li><p>Linux</p>
+<p>日志默认存放位置：<code>/var/log/</code><br>查看日志配置情况：more &#x2F;etc&#x2F;rsyslog.conf</p>
+</li>
+</ul>
+<h3 id="常见中间件的配置文件路径"><a href="#常见中间件的配置文件路径" class="headerlink" title="常见中间件的配置文件路径"></a>常见中间件的配置文件路径</h3><ul>
+<li>apache：<code>/etc/httpd/conf</code></li>
+<li>nginx：<code>/etc/nginx</code></li>
+<li>iis7：<code>C:\Windows\System32\inetsrv\config\</code></li>
+</ul>
+<h3 id="如何查看系统内存-shell"><a href="#如何查看系统内存-shell" class="headerlink" title="如何查看系统内存 shell"></a>如何查看系统内存 shell</h3><ul>
+<li>文章汇总：<a target="_blank" rel="noopener" href="https://blog.csdn.net/shuteer_xu/article/details/117458250">link</a></li>
+<li>查杀内存马：<a target="_blank" rel="noopener" href="https://gv7.me/articles/2020/kill-java-web-filter-memshell/">link</a></li>
+<li>php、python、java内存马分析：<a target="_blank" rel="noopener" href="https://www.geekby.site/2021/09/webshell%E5%86%85%E5%AD%98%E9%A9%AC%E5%88%86%E6%9E%90/">link</a></li>
+</ul>
+<h3 id="Java-内存马排查"><a href="#Java-内存马排查" class="headerlink" title="Java 内存马排查"></a>Java 内存马排查</h3><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/274466.html">https://www.freebuf.com/articles/web/274466.html</a></p>
+<p>如果我们通过检测工具或者其他手段发现了一些内存webshell的痕迹，需要有一个排查的思路来进行跟踪分析，也是根据各类型的原理，列出一个排查思路。</p>
+<blockquote>
+<p>如果是jsp注入，日志中排查可疑jsp的访问请求。</p>
+<p>如果是代码执行漏洞，排查中间件的error.log，查看是否有可疑的报错，判断注入时间和方法</p>
+<p>根据业务使用的组件排查是否可能存在java代码执行漏洞以及是否存在过webshell，排查框架漏洞，反序列化漏洞。</p>
+<p>如果是servlet或者spring的controller类型，根据上报的webshell的url查找日志（日志可能被关闭，不一定有），根据url最早访问时间确定被注入时间。</p>
+<p>如果是filter或者listener类型，可能会有较多的404但是带有参数的请求，或者大量请求不同url但带有相同的参数，或者页面并不存在但返回200</p>
+</blockquote>
+<h3 id="如何修改WEB端口？如果不能修改端口还有什么利用方法？"><a href="#如何修改WEB端口？如果不能修改端口还有什么利用方法？" class="headerlink" title="如何修改WEB端口？如果不能修改端口还有什么利用方法？"></a>如何修改WEB端口？如果不能修改端口还有什么利用方法？</h3><p>修改 web 端口：修改中间件配置文件中的 web 服务端口即可</p>
+<p>不能修改的话可以使用端口映射，使用 nginx 反向代理也可以</p>
+<h3 id="获得文件读取漏洞，通常会读哪些文件，Linux和windows都谈谈"><a href="#获得文件读取漏洞，通常会读哪些文件，Linux和windows都谈谈" class="headerlink" title="获得文件读取漏洞，通常会读哪些文件，Linux和windows都谈谈"></a>获得文件读取漏洞，通常会读哪些文件，Linux和windows都谈谈</h3><p><strong>通用</strong></p>
+<ul>
+<li>找 Web 应用的配置文件，指不定有外联数据库</li>
+<li>找 Web 中间件的配置文件，指不定有 Tomcat 配置界面的用户密码</li>
+<li>找系统文件</li>
+</ul>
+<p><strong>linux</strong></p>
+<ul>
+<li><p><code>etc/passwd、etc/shadow</code>直接读密码</p>
+</li>
+<li><p><code>/etc/hosts</code> # 主机信息</p>
+</li>
+<li><p><code>/root/.bashrc</code> # 环境变量</p>
+</li>
+<li><p><code>/root/.bash_history</code> # 还有root外的其他用户</p>
+</li>
+<li><p><code>/root/.viminfo</code> # vim 信息</p>
+</li>
+<li><p><code>/root/.ssh/id_rsa</code> # 拿私钥直接ssh</p>
+</li>
+<li><p><code>/proc/xxxx/cmdline</code> # 进程状态枚举 xxxx 可以为0000-9999 使用burpsuite</p>
+</li>
+<li><p>数据库 config 文件</p>
+</li>
+<li><p>web 日志 <code>access.log, error.log</code></p>
+</li>
+<li><p>ssh 日志</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/root/.ssh/id_rsa
+/root/.ssh/id_rsa.pub
+/root/.ssh/authorized_keys
+/etc/ssh/sshd_config
+/var/log/secure
+/etc/sysconfig/network-scripts/ifcfg-eth0
+/etc/syscomfig/network-scripts/ifcfg-eth1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>/var/lib/php/sess_PHPSESSID</code> # 非常规问题 session 文件( 参考 平安科技的一道session包含 <a target="_blank" rel="noopener" href="http://www.jianshu.com/p/2c24ea34566b">http://www.jianshu.com/p/2c24ea34566b</a>)</p>
+</li>
+</ul>
+<p><strong>windows</strong></p>
+<ul>
+<li><code>C:\boot.ini</code> &#x2F;&#x2F;查看系统版本</li>
+<li><code>C:\Windows\System32\inetsrv\MetaBase.xml</code> &#x2F;&#x2F;IIS 配置文件</li>
+<li><code>C:\Windows\repair\sam</code> &#x2F;&#x2F;存储系统初次安装的密码</li>
+<li><code>C:\Program Files\mysql\my.ini</code> &#x2F;&#x2F;Mysql 配置</li>
+<li><code>C:\Program Files\mysql\data\mysql\user.MY D</code> &#x2F;&#x2F;Mysql root</li>
+<li><code>C:\Windows\php.ini</code> &#x2F;&#x2F;php 配置信息</li>
+<li><code>C:\Windows\my.ini</code> &#x2F;&#x2F;Mysql 配置信息</li>
+</ul>
+<h3 id="如何分析被代理出来的数据流"><a href="#如何分析被代理出来的数据流" class="headerlink" title="如何分析被代理出来的数据流"></a>如何分析被代理出来的数据流</h3><p>分析数据包请求头中的 xff、referer 等收集有用的信息</p>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/245585.html">基于网络欺骗与浏览器指纹的WEB攻击溯源</a></p>
+<h3 id="windows端口进程间转换"><a href="#windows端口进程间转换" class="headerlink" title="windows端口进程间转换"></a>windows端口进程间转换</h3><p>端口-&gt;进程</p>
+<ol>
+<li><code>netstat -ano | findstr “port”</code>查看目前的网络连接，定位可疑的 ESTABLISHED</li>
+<li>根据<code>netstat </code>定位出的 pid，再通过<code>tasklist</code>命令进行进程定位<code> tasklist | findstr “PID”</code></li>
+</ol>
+<p><img src="https://s2.loli.net/2022/05/25/NVM7Jl4bv8sqyiK.png" alt="image-20220103194348302"></p>
+<h3 id="查看进程对应的程序位置"><a href="#查看进程对应的程序位置" class="headerlink" title="查看进程对应的程序位置"></a>查看进程对应的程序位置</h3><p>任务管理器–选择对应进程–右键打开文件位置运行输入 wmic，cmd界面 输入 process</p>
+<p>查看 Windows 服务所对应的端口</p>
+<p><code>%system%/system32/drivers/etc/services</code>（一般 %system% 就是 C:\Windows）</p>
+<h3 id="查看windows进程的方法"><a href="#查看windows进程的方法" class="headerlink" title="查看windows进程的方法"></a>查看windows进程的方法</h3><ol>
+<li>开始 – 运行 – 输入<code>msinfo32</code> 命令，依次点击 “软件环境 – 正在运行任务” 就可以查看到进程的详细信息，比如进程路径、进程ID、文件创建日期以及启动时间等</li>
+<li>打开D盾_web查杀工具，进程查看，关注没有签名信息的进程</li>
+<li>通过微软官方提供的 Process Explorer 等工具进行排查</li>
+</ol>
+<p>查看<strong>可疑的进程</strong>及其子进程。可以通过观察以下内容：</p>
+<ul>
+<li>没有签名验证信息的进程</li>
+<li>没有描述信息的进程</li>
+<li>进程的属主</li>
+<li>进程的路径是否合法</li>
+<li>CPU 或内存资源占用长时间过高的进程</li>
+</ul>
+<h3 id="你能说明文件上传的原理吗？"><a href="#你能说明文件上传的原理吗？" class="headerlink" title="你能说明文件上传的原理吗？"></a>你能说明文件上传的原理吗？</h3><ul>
+<li>PHP：如果系统中存在可以上传文件的功能点，就可以上传后门脚本文件，通过一些方法绕过上传限制，如果能访问后门的的话，系统存在文件上传漏洞，可以借助后门执行命令</li>
+<li>Java：上传 jsp 代码</li>
+<li>Asp&#x2F;Aspx</li>
+<li>Python：因为脚本需要译后生成 pyc 字节码文件，所以不存在文件上传</li>
+</ul>
+<h3 id="文件上传攻击特征？"><a href="#文件上传攻击特征？" class="headerlink" title="文件上传攻击特征？"></a>文件上传攻击特征？</h3><p>能够上传文件的接口，应用程序对用户上传文件类型不校验或者校验不严格可绕过，导致任意类型文件上传，攻击者可上传 webshell 拿到服务器权限，在这个过程中攻击者必然会上传恶意脚本文件</p>
+<h3 id="文件上传加固方法？"><a href="#文件上传加固方法？" class="headerlink" title="文件上传加固方法？"></a>文件上传加固方法？</h3><ol>
+<li>后端限制文件上传白名单，头像不允许上传 svg</li>
+<li>上传后文件随机重命名，不要输出保存文件位置</li>
+<li>图片文件可以二次渲染，使用对象存储 oss</li>
+<li>文件目录取消执行权限，PHP 设置 basedir</li>
+</ol>
+<h3 id="用过Nmap扫描工具吗"><a href="#用过Nmap扫描工具吗" class="headerlink" title="用过Nmap扫描工具吗"></a>用过Nmap扫描工具吗</h3><p>nmap 扫描基础命令</p>
+<ul>
+<li>-sT TCP (全)连接扫描，准确但留下大量日志记录</li>
+<li>-sS TCP SYN (半)扫描，速度较快，不会留下日志</li>
+<li>-sN null 扫描，标志位全为 0，不适用 Windows</li>
+<li>-sF FIN 扫描，标志位 FIN&#x3D;1，不适用 Windows</li>
+<li>-O 查看目标主机系统版本</li>
+<li>-sV 探测服务版本</li>
+<li>-A 全面扫描</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/05/25/rdcNnQ5zoyEqHhK.png" alt="img"></p>
+<h3 id="你做过渗透测试的工作吗？"><a href="#你做过渗透测试的工作吗？" class="headerlink" title="你做过渗透测试的工作吗？"></a>你做过渗透测试的工作吗？</h3><p>首先信息收集，收集子域名、Whois、C段、旁站、Web 系统指纹识别，然后测试 web 系统的漏洞</p>
+<h3 id="暴力破解加固方法？"><a href="#暴力破解加固方法？" class="headerlink" title="暴力破解加固方法？"></a>暴力破解加固方法？</h3><ol>
+<li>添加强度较高的验证码，不易被破解</li>
+<li>修改密码设置规则，提高用户的密码强度</li>
+<li>同一账号登陆次数锁定，生成锁定日志</li>
+<li>定期排查弱口令</li>
+</ol>
+<h3 id="Sql注入加固措施？"><a href="#Sql注入加固措施？" class="headerlink" title="Sql注入加固措施？"></a>Sql注入加固措施？</h3><p>对于输入的字符进行过滤</p>
+<p>使用 PDO 预编译语句处理</p>
+<h3 id="一台主机在内网进行横向攻击，你应该怎么做？"><a href="#一台主机在内网进行横向攻击，你应该怎么做？" class="headerlink" title="一台主机在内网进行横向攻击，你应该怎么做？"></a>一台主机在内网进行横向攻击，你应该怎么做？</h3><p>确定攻击来源，是不是员工内部误操作，比如询问运维是否有自动化轮训脚本</p>
+<p>如果没有，确定是攻击，结合时间点，根据设备信息，看一下安全事件，进程，流量</p>
+<p>找到问题主机，开始应急响应流程：准备、检测、遏制、根除、恢复、跟踪，具体的操作要交给现场运维去处理</p>
+<h3 id="你还用过其他态势感知的产品吗？"><a href="#你还用过其他态势感知的产品吗？" class="headerlink" title="你还用过其他态势感知的产品吗？"></a>你还用过其他态势感知的产品吗？</h3><p>ips，ids，hids，堡垒机等</p>
+<h3 id="命令行工具用的什么比较多？"><a href="#命令行工具用的什么比较多？" class="headerlink" title="命令行工具用的什么比较多？"></a>命令行工具用的什么比较多？</h3><p>xshell、xftp、finalshell</p>
+<h3 id="你用过微步吗？"><a href="#你用过微步吗？" class="headerlink" title="你用过微步吗？"></a>你用过微步吗？</h3><p>微步在线是一个威胁情报中心，可以通过 ip 或域名查询其是不是恶意的，对于判断恶意链接具有一定的参考性，他还有一个插件可以在页面选中就能进行查询，还是一个比较好用的工具</p>
+<h3 id="什么是跨域，JSONP与CORS"><a href="#什么是跨域，JSONP与CORS" class="headerlink" title="什么是跨域，JSONP与CORS"></a>什么是跨域，JSONP与CORS</h3><p><strong>同源策略</strong></p>
+<p>同源策略：域名、协议、端口均相同</p>
+<p>浏览器执行 JavaScript 脚本时，会检查这个脚本属于那个页面，如果不是同源页面，就不会被执行</p>
+<p><strong>什么是跨域？</strong></p>
+<p>跨域：指的是浏览器不能执行其它网站的脚本，它是由浏览器的同源策略造成的，是浏览器的安全限制！</p>
+<p><strong>JSONP跨域</strong></p>
+<p>利用 js script 标签中 src 属性可以跨域的特性，使用 callback 参数的函数名来接收数据</p>
+<p>只支持 GET 请求，不支持 POST 等其它请求，也不支持复杂请求，只支持简单请求</p>
+<p><strong>CORS跨域</strong></p>
+<p>支持所有的请求，包含 GET、POST、OPTOIN、PUT、DELETE 等既支持复杂请求，也支持简单请求</p>
+<p>JSONP 与 CORS 的使用目的相同，并且都需要服务端和客户端同时支持，但 CORS 的功能更加强大</p>
+<p><strong>JSONP和CORS的优缺点</strong></p>
+<ol>
+<li>JSONP 的主要优势在于对浏览器的支持较好；虽然目前主流浏览器都支持 CORS，但 IE9 及以下不支持 CORS</li>
+<li>JSONP 只能用于获取资源（即只读，类似于 GET 请求）；CORS 支持所有类型的 HTTP 请求，功能完善</li>
+<li>JSONP 只会发一次请求；而对于复杂请求，CORS 会发两次请求</li>
+</ol>
+<p><strong>应用场景</strong></p>
+<p>如果需要兼容IE低版本浏览器，无疑，JSONP</p>
+<p>如果需要对服务端资源进行操作，无疑，CORS</p>
+<p>其他情况的话，根据自己的对需求的分析来决定和使用</p>
+<h3 id="http状态与无连接"><a href="#http状态与无连接" class="headerlink" title="http状态与无连接"></a>http状态与无连接</h3><p><strong>无连接</strong></p>
+<ol>
+<li>每一个访问都是无连接，服务器挨个处理访问队列里的访问，处理完一个就关闭连接，这事儿就完了，然后处理下一个新的</li>
+<li>无连接的含义是限制每次连接只处理一个请求服务器处理完客户的请求，并收到客户的应答后，即断开连接</li>
+</ol>
+<p><strong>无状态</strong></p>
+<ol>
+<li>协议对于事务处理没有记忆能力</li>
+<li>对同一个 url 请求没有上下文关系</li>
+<li>每次的请求都是独立的，它的执行情况和结果与前面的请求和之后的请求是无直接关系的，它不会受前面的请求应答情况直接影响，也不会直接影响后面的请求应答情况</li>
+<li>服务器中没有保存客户端的状态，客户端必须每次带上自己的状态去请求服务器</li>
+</ol>
+<h3 id="什么是路由表"><a href="#什么是路由表" class="headerlink" title="什么是路由表"></a>什么是路由表</h3><p>在计算机网络中，路由表（routing table）或称路由择域信息库（RIB, Routing Information Base），是一个存储在路由器或者联网计算机中的电子表格（文件）或类数据库路由表存储着指向特定网络地址的路径（在有些情况下，还记录有路径的路由度量值）路由表中含有网络周边的拓扑信息路由表建立的主要目标是为了实现路由协议和静态路由选择</p>
+<p>每个路由器中都有一个路由表和 FIB(Forward Information Base) 表：路由表用来决策路由，FIB 用来转发分组路由表中有三类路由：</p>
+<ol>
+<li>链路层协议发现的路由（即是直连路由）</li>
+<li>静态路由</li>
+<li>动态路由协议 RIP、OSRF 发现的路由</li>
+</ol>
+<h3 id="非sql数据库"><a href="#非sql数据库" class="headerlink" title="非sql数据库"></a>非sql数据库</h3><p>Zookeeper，HBase、Redis、MongoDB、Couchbase、LevelDB</p>
+<h3 id="常见OA系统"><a href="#常见OA系统" class="headerlink" title="常见OA系统"></a>常见OA系统</h3><p>PHP：通达OA、泛微 Eoffice</p>
+<p>Java：泛微OA&#x2F;云桥、致远OA、蓝凌OA、用友OA</p>
+<p>ASP：启莱OA</p>
+<h3 id="横向越权漏洞的修复"><a href="#横向越权漏洞的修复" class="headerlink" title="横向越权漏洞的修复"></a>横向越权漏洞的修复</h3><p>横向越权：横向越权指的是攻击者尝试访问与他拥有相同权限的用户的资源</p>
+<p>纵向越权：纵向越权指的是一个低级别攻击者尝试访问高级别用户的资源</p>
+<p>对于纵向越权，我们可以通过设置用户角色，为不同的角色提供不同的权限来避免</p>
+<p>为了防止横向越权，我们可以使用缓存来进行辅助，当登录成功或者进行操作时，我们在缓存中存储一对由用户名和一个唯一的数字组成的数据（token），然后返回放入的唯一数据在重置密码时我们的参数不仅需要用户名和密码还需要前面生成的唯一数字，根据用户名在缓存中取出对应的数字，如果取出的数字和参数中传入的想等，则证明重置的当前用户的密码，否则不是，且不予以重置</p>
+<h3 id="如何打击黑灰产工具"><a href="#如何打击黑灰产工具" class="headerlink" title="如何打击黑灰产工具"></a>如何打击黑灰产工具</h3><ol>
+<li>全面监控和快速响应（溯源）：对黑灰进行长期跟进，了解黑灰产工具的传播链条和路径，第一时间捕获活跃的黑灰产工具（建立特征词监控，数据取样、交叉分析）</li>
+<li>建立软件指纹库，增加风险识别能力</li>
+<li>建立黑灰产情报共享，最大化情报价值</li>
+</ol>
+<h3 id="如何反爬"><a href="#如何反爬" class="headerlink" title="如何反爬"></a>如何反爬</h3><ol>
+<li>后台对访问进行统计，如果单个 IP 访问超过阈值，予以封锁</li>
+<li>后台对访问进行统计，如果单个 session 访问超过阈值，予以封锁</li>
+<li>后台对访问进行统计，如果单个 userAgent 访问超过阈值，予以封锁</li>
+<li>以上的组合</li>
+</ol>
+<h3 id="Linux下查找服务端口的命令"><a href="#Linux下查找服务端口的命令" class="headerlink" title="Linux下查找服务端口的命令"></a>Linux下查找服务端口的命令</h3><p>Linux下查找服务端口的命令？一句话查找80端口服务的命令？</p>
+<p>使用grep 命令 要使用 grep 命令在Linux 中查找指定服务的默认端口号，只需运行</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token operator">&lt;</span>port<span class="token operator">></span> /etc/services
+<span class="token function">grep</span> services /etc/services<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://s2.loli.net/2022/05/25/qZVnLyhwU1mDdXs.png" alt="image-20220107203438844"></p>
+<h3 id="如何发现钓鱼邮件"><a href="#如何发现钓鱼邮件" class="headerlink" title="如何发现钓鱼邮件"></a>如何发现钓鱼邮件</h3><p><strong>钓鱼邮件发现</strong></p>
+<p>发现途径如下：</p>
+<p>邮件系统异常登录告警、员工上报、异常行为告警、邮件蜜饵告警</p>
+<p>推荐接入微步或奇安信的情报数据。对邮件内容出现的 URL 做扫描，可以发现大量的异常链接</p>
+<h3 id="钓鱼邮件处置"><a href="#钓鱼邮件处置" class="headerlink" title="钓鱼邮件处置"></a>钓鱼邮件处置</h3><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/es/264037.html">https://www.freebuf.com/articles/es/264037.html</a></p>
+<ol>
+<li><p>屏蔽办公区域对钓鱼邮件内容涉及站点、URL 访问</p>
+<p>根据办公环境实际情况可以在上网行为管理、路由器、交换机上进行屏蔽</p>
+<p>邮件内容涉及域名、IP 均都应该进行屏蔽</p>
+<p>对访问钓鱼网站的内网 IP 进行记录，以便后续排查溯源可能的后果</p>
+</li>
+<li><p>屏蔽钓鱼邮件</p>
+<p>屏蔽钓鱼邮件来源邮箱域名</p>
+<p>屏蔽钓鱼邮件来源 IP</p>
+<p>有条件的可以根据邮件内容进行屏蔽</p>
+<p>删除还在邮件服务器未被客户端收取钓鱼邮件</p>
+</li>
+<li><p>处理接收到钓鱼邮件的用户</p>
+<ul>
+<li><p>根据钓鱼邮件发件人进行日志回溯</p>
+<p>此处除了需要排查有多少人接收到钓鱼邮件之外，还需要排查是否公司通讯录泄露。采用 TOP500 姓氏撞库发送钓鱼邮件的攻击方式相对后续防护较为简单。如果发现是使用公司通讯录顺序则需要根据通讯录的离职情况及新加入员工排查通讯录泄露时间。毕竟有针对性的社工库攻击威力要比 TOP100、TOP500 大很多</p>
+</li>
+<li><p>通知已接收钓鱼邮件的用户进行处理</p>
+</li>
+<li><p><strong>删除钓鱼邮件</strong></p>
+</li>
+<li><p><strong>系统改密</strong></p>
+</li>
+<li><p><strong>全盘扫毒</strong></p>
+</li>
+</ul>
+</li>
+<li><p>后续：溯源、员工培训提升安全意识</p>
+</li>
+</ol>
+<h3 id="如何查看区分是扫描流量和手动流量"><a href="#如何查看区分是扫描流量和手动流量" class="headerlink" title="如何查看区分是扫描流量和手动流量"></a>如何查看区分是扫描流量和手动流量</h3><p>（扫描数据量大，请求有规律，手动扫描间隔较少）</p>
+<h3 id="遇到-exe文件如何处理？"><a href="#遇到-exe文件如何处理？" class="headerlink" title="遇到.exe文件如何处理？"></a>遇到.exe文件如何处理？</h3><p>首先看它的来源和去向，然后可以下载但不运行，放入微步沙箱中，看是否有后门，若有后门，就用 IDA 反汇编得到恶意攻击者的有用信息，再进一步描绘出攻击者画像进行溯源</p>
+<h3 id="Linux-的-Selinux-是什么？如何设置-Selinux？"><a href="#Linux-的-Selinux-是什么？如何设置-Selinux？" class="headerlink" title="Linux 的 Selinux 是什么？如何设置 Selinux？"></a>Linux 的 Selinux 是什么？如何设置 Selinux？</h3><p>SELinux 是一种安全子系统，它能控制程序只能访问特定文件使用 setup 工具进入图形化关闭搜索或者修改<code>/etc/sysconfig/selinux</code> 文件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">SELINUX</span><span class="token operator">=</span>disabled<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>防火墙打开使用 <code>service iptables start</code> 或则<code>/etc/init.d/iptables start</code></p>
+<h3 id="iptables-工作在-TCP-x2F-IP-模型中的哪层？"><a href="#iptables-工作在-TCP-x2F-IP-模型中的哪层？" class="headerlink" title="iptables 工作在 TCP&#x2F;IP 模型中的哪层？"></a>iptables 工作在 TCP&#x2F;IP 模型中的哪层？</h3><p>网络层</p>
+<h3 id="日志分析ELK的使用和分析"><a href="#日志分析ELK的使用和分析" class="headerlink" title="日志分析ELK的使用和分析"></a>日志分析ELK的使用和分析</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21427267">https://www.zhihu.com/question/21427267</a></p>
+<ul>
+<li>Elasticsearch是个开源分布式搜索引擎，它的特点有：分布式，零配置，自动发现，索引自动分片，索引副本机制，restful风格接口，多数据源，自动搜索负载等。</li>
+<li>Logstash是一个完全开源的工具，他可以对你的日志进行收集、过滤，并将其存储供以后使用（如，搜索）。</li>
+<li>Kibana 也是一个开源和免费的工具，它Kibana可以为 Logstash 和 ElasticSearch 提供的日志分析友好的 Web 界面，可以帮助您汇总、分析和搜索重要数据日志。</li>
+</ul>
+</blockquote>
+<p>举例-阿里规范 用户历史命令记录</p>
+<p>缺点：安全性不够。使用x-pack实现安全认证及权限管理功能</p>
+<h3 id="awk-sed的使用"><a href="#awk-sed的使用" class="headerlink" title="awk sed的使用"></a>awk sed的使用</h3><h3 id="Log4j"><a href="#Log4j" class="headerlink" title="Log4j"></a>Log4j</h3><p>log4j 是 javaweb 的日志组件，用来记录 web 日志</p>
+<p>去指定下载文件的 url 在搜索框或者搜索的 url 里面，加上 ${jndi:ldap:&#x2F;&#x2F;127.0.0.1&#x2F;test} ，log4j 会对这串代码进行表达式解析，给 lookup 传递一个恶意的参数指定，参数指的是比如 ldap 不存在的资源 $ 是会被直接执行的。后面再去指定下载文件的 url，去下载我们的恶意文件。比如是 x.class 下载完成后，并且会执行代码块</p>
+<p>修复：升级 Log4j 到最新版本，根据业务判断是否关闭 lookup</p>
+<h2 id="⬆️入侵检测-amp-防御"><a href="#⬆️入侵检测-amp-防御" class="headerlink" title="⬆️入侵检测&amp;防御"></a>⬆️入侵检测&amp;防御</h2><h3 id="WAF产品如何来拦截攻击？"><a href="#WAF产品如何来拦截攻击？" class="headerlink" title="WAF产品如何来拦截攻击？"></a>WAF产品如何来拦截攻击？</h3><p>Waf 产品有三种</p>
+<ol>
+<li><p>云 Waf</p>
+<p>用户不需要在自己的网络中安装软件程序或部署硬件设备，就可以对网站实施安全防护，它的主要实现方式是<strong>利用 DNS 技术</strong>，通过移交域名解析权来实现安全防护。用户的请求首先发送到云端节点进行检测，如存在异常请求则进行拦截否则将请求转发至真实服务器</p>
+</li>
+<li><p>Web 防护软件</p>
+<p>安装在需要防护的服务器上，实现方式通常是 <strong>Waf 监听端口或以 Web 容器扩展</strong>方式进行请求检测和阻断</p>
+</li>
+<li><p>硬件 Web 防火墙</p>
+<p>Waf <strong>串行部署</strong>在 Web 服务器前端，用于检测、阻断异常流量。常规硬件 Waf 的实现方式是通过<strong>代理技术</strong>代理来自外部的流量</p>
+</li>
+</ol>
+<p>原理都相同，通过部署在 Web 服务器前方串行接入来将 Web 流量牵引到 WAF 设备中进行清洗或者拦截，最终只把正常用户的请求转发给服务器</p>
+<p>当前市场上 Waf 产品核心的防护机制是“规则”，每一个请求、会话，经过抓包，“开包检查”，每一项规则都会检查到，一旦检查不通过，就会被认为是非法访问，拒绝处理</p>
+<h3 id="WAF有哪些防护方式？"><a href="#WAF有哪些防护方式？" class="headerlink" title="WAF有哪些防护方式？"></a>WAF有哪些防护方式？</h3><ul>
+<li><p>Web基础防护</p>
+<p>可防范常规的 web 应用攻击，如 SQL 注入攻击、XSS 跨站攻击等，可检测 webshell，检查 HTTP 上传通道中的网页木马，打开开关即实时生效</p>
+</li>
+<li><p>CC 攻击防护</p>
+<p>可根据 IP、Cookie 或者 Referer 字段名设置灵活的限速策略，有效缓解 CC 攻击</p>
+</li>
+<li><p>精准访问防护</p>
+<p>对常见 HTTP 字段进行条件组合， 支持定制化防护策略如CSRF防护，通过自定义规则的配置，更精准的识别恶意伪造请求、保护网站敏感信息、提高防护精准性</p>
+</li>
+<li><p>IP 黑白名单</p>
+<p>添加终拦截与始终放行的黑白名单 IP，增加防御准确性</p>
+</li>
+<li><p>地理位置访问控制</p>
+<p>添加地理位置访问控制规则，针对来源 IP 进行自定义访问控制</p>
+</li>
+<li><p>网页防篡改</p>
+<p>对网站的静态网页进行缓存配置，当用户访问时返回给用户缓存的正常页面，并随机检测网页是否被篡改</p>
+</li>
+<li><p>网站反爬虫</p>
+<p>动态分析网站业务模型，结合人机识别技术和数据风控手段，精准识别爬虫行为</p>
+</li>
+<li><p>误报屏蔽</p>
+<p>针对特定请求忽略某些攻击检测规则，用于处理误报事件</p>
+</li>
+<li><p>隐私屏蔽</p>
+<p>隐私信息屏蔽，避免用户的密码等信息出现在事件日志中</p>
+</li>
+<li><p>防敏感信息泄露</p>
+<p>防止在页面中泄露用户的敏感信息，例如：用户的身份证号码、手机号码、电子邮箱等</p>
+</li>
+</ul>
+<h3 id="不安全的第三方组件的漏洞如何做前置规避？"><a href="#不安全的第三方组件的漏洞如何做前置规避？" class="headerlink" title="不安全的第三方组件的漏洞如何做前置规避？"></a>不安全的第三方组件的漏洞如何做前置规避？</h3><p>第三方组件缺陷又被归结为供应链安全问题，供应链安全需要多方面考虑。没有万能方案，但是组织可以用分层防御的组合来保护供应链</p>
+<ul>
+<li><p>安全战略评估</p>
+<p>要评估风险与合规性，需要针对业务挑战、需求和目标评估现有的安全治理框架——包括数据隐私、第三方风险和IT法规合规需求及差距。安全风险量化、安全开发、法规和标准合规性以及安全教育和培训是关键</p>
+</li>
+<li><p>事件响应计划与编排</p>
+<p>提前为入侵、关闭或中断做好准备，并拥有稳健的事件响应计划很重要。通过实践、测试和易执行的响应计划和补救措施，防止损失</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/neopoints/261681.html">https://www.freebuf.com/articles/neopoints/261681.html</a></p>
+<h3 id="如果现在要你写一个检测命令注入的脚本？"><a href="#如果现在要你写一个检测命令注入的脚本？" class="headerlink" title="如果现在要你写一个检测命令注入的脚本？"></a>如果现在要你写一个检测命令注入的脚本？</h3><p>你会怎么写，有哪些要注意的地方，如果别人的脚本检测出来了你的脚本没检测出来你觉的你的脚本会存在什么问题，脚本检测过程中如果没有回显你会怎么做</p>
+<h1 id="🅰️溯源"><a href="#🅰️溯源" class="headerlink" title="🅰️溯源"></a>🅰️溯源</h1><p><img src="https://s2.loli.net/2022/05/25/2ZAenxgQsu6b7DC.png" alt="image-20220103203355953"></p>
+<h2 id="⬆️基本步骤"><a href="#⬆️基本步骤" class="headerlink" title="⬆️基本步骤"></a>⬆️基本步骤</h2><h3 id="1-攻击源捕获"><a href="#1-攻击源捕获" class="headerlink" title="1.攻击源捕获"></a>1.攻击源捕获</h3><ul>
+<li>安全设备报警，如扫描IP、威胁阻断、病毒木马、入侵事件等</li>
+<li>日志与流量分析，异常的通讯流量、攻击源与攻击目标等</li>
+<li>服务器资源异常，异常的文件、账号、进程、端口，启动项、计划任务和服务等</li>
+<li>邮件钓鱼，获取恶意文件样本、钓鱼网站 URL 等</li>
+<li>蜜罐系统，获取攻击者 ID、电脑信息、浏览器指纹、行为、意图的相关信息</li>
+</ul>
+<h3 id="2-溯源反制手段"><a href="#2-溯源反制手段" class="headerlink" title="2.溯源反制手段"></a>2.溯源反制手段</h3><ul>
+<li>IP 定位技术<br>根据IP定位物理地址–代理 IP<br>溯源案例：通过 IP 端口扫描，反向渗透服务器进行分析，最终定位到攻击者相关信息</li>
+<li>ID 追踪术<br>ID 追踪术，搜索引擎、社交平台、技术论坛、社工库匹配<br>溯源案例：利用 ID 从技术论坛追溯邮箱，继续通过邮箱反追踪真实姓名，通过姓名找到相关简历信息</li>
+<li>网站 url<br>域名 Whois 查询–注册人姓名、地址、电话和邮箱 –域名隐私保护<br>溯源案例：通过攻击 IP 历史解析记录&#x2F;域名，对域名注册信息进行溯源分析</li>
+<li>恶意样本分析<br>提取样本特征、用户名、ID、邮箱、C2 服务器等信息–同源分析<br>溯源案例：样本分析过程中，发现攻击者的个人 ID 和 QQ，成功定位到攻击者</li>
+<li>社交账号<br>基于 JSONP 跨域，获取攻击者的主机信息、浏览器信息、真实 IP 及社交信息等<br>利用条件：可以找到相关社交网站的 jsonp 接口泄露敏感信息，相关网站登录未注销</li>
+</ul>
+<h3 id="3-攻击者画像"><a href="#3-攻击者画像" class="headerlink" title="3.攻击者画像"></a>3.攻击者画像</h3><ul>
+<li><p>攻击路径</p>
+<p>攻击目的：拿到权限、窃取数据、获取利益、DDOS 等<br>网络代理：代理 IP、跳板机、C2 服务器等<br>攻击手法：鱼叉式邮件钓鱼、Web渗透、水坑攻击、近源渗透、社会工程等</p>
+</li>
+<li><p>攻击者身份画像</p>
+<p>虚拟身份：ID、昵称、网名<br>真实身份：姓名、物理位置<br>联系方式：手机号、qq&#x2F;微信、邮箱<br>组织情况：单位名称、职位信息</p>
+</li>
+</ul>
+<h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><ol>
+<li>域名、ip 反查目标个人信息</li>
+<li>支付宝转账，确定目标姓氏</li>
+<li>淘宝找回密码，确定目标名字</li>
+<li>企业微信手机号查公司名称</li>
+<li>REG007 查注册应用、网站</li>
+<li>程序 PDB 信息泄露</li>
+</ol>
+<h3 id="主动防御"><a href="#主动防御" class="headerlink" title="主动防御"></a>主动防御</h3><p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/web/245585.html">基于网络欺骗与浏览器指纹的WEB攻击溯源</a></p>
+<ol>
+<li>浏览器指纹技术</li>
+<li>网络欺骗技术，蜜罐蜜网</li>
+</ol>
+<h3 id="流量溯源"><a href="#流量溯源" class="headerlink" title="流量溯源"></a>流量溯源</h3><p>可利用流量工具 wireshark 进行溯源：</p>
+<ol>
+<li>查看 eval、 z0、 shell whoami 等关键字，查看出现次数过多的时候， 需要查看是哪个页面发起的请求，有可能是 webshell</li>
+<li>通过 WireShark 工具快速搜索关键字，定位到异常流量包</li>
+<li>找出异常 IP 和所上传的内容，查看是否为 webshell</li>
+</ol>
+<p>如何定位到攻击IP：</p>
+<ol>
+<li><p>首先通过选择 - 统计 - 对话查看流量的走向情况， 定位可疑的 IP 地址</p>
+</li>
+<li><p>根据定位到的 IP 地址，尝试对上传的 webshell 进行定位</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ip.addr <span class="token operator">==</span> <span class="token function">ip</span> <span class="token operator">&amp;&amp;</span> http matches
+<span class="token string">"uploadllevallselectlxp_cmdshell"</span> <span class="token operator">&amp;&amp;</span> http.request.method <span class="token operator">==</span> <span class="token string">"POST"</span>
+<span class="token number">12</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>查找到 webshell 后尝试溯源漏洞位置</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">http.request.uri contains <span class="token string">"webshell.php"</span>
+<span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>定位到最开始 webshell 执行或上传的时候</p>
+</li>
+<li><p>根据最开始的 HTTP 上传包或者其他漏洞特征定位漏洞类型</p>
+</li>
+</ol>
+<h3 id="wireshark"><a href="#wireshark" class="headerlink" title="wireshark"></a>wireshark</h3><p>wireshark 简单的过滤规则</p>
+<ul>
+<li><p>过滤ip：</p>
+<p>过滤源 ip 地址：ip.src1.1.1.1</p>
+<p>目的 ip 地址：ip.dst1.1.1.1</p>
+</li>
+<li><p>过滤端口：</p>
+<p>过滤80端口：tcp.port &#x3D;&#x3D; 80</p>
+<p>源端口：tcp.srcport &#x3D;&#x3D; 80</p>
+<p>目的端：tcp.dstport &#x3D;&#x3D; 80</p>
+</li>
+<li><p>协议过滤：直接输入协议名即可，如 http 协议 http</p>
+</li>
+<li><p>http 模式过滤：过滤 get&#x2F;post 包 httprequest.mothod &#x3D;&#x3D; “GET&#x2F;POST”</p>
+</li>
+</ul>
+<h3 id="常用取证工具"><a href="#常用取证工具" class="headerlink" title="常用取证工具"></a>常用取证工具</h3><p>Wireshark、xplico、 Volatility、 FastlR Collector、Autopsy、 Dumplt、 FTK Imager、Foremost、Scalpel、 Bulk_ exetractor 等</p>
+<h3 id="优秀文章"><a href="#优秀文章" class="headerlink" title="优秀文章"></a>优秀文章</h3><p><a target="_blank" rel="noopener" href="https://www.anquanke.com/post/id/260888">域前置溯源方法思考</a></p>
+<h2 id="⬆️其他"><a href="#⬆️其他" class="headerlink" title="⬆️其他"></a>⬆️其他</h2><h3 id="对蜜罐的了解"><a href="#对蜜罐的了解" class="headerlink" title="对蜜罐的了解"></a>对蜜罐的了解</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/05/25/%E8%93%9D%E9%98%9F%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2022/05/25/%E8%93%9D%E9%98%9F%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">John Doe</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/05/25/%E8%93%9D%E9%98%9F%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="蓝队面试题">
+                        
+                        <span class="card-title">蓝队面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/24/hw%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="hw知识汇总">
+                        
+                        <span class="card-title">hw知识汇总</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">John Doe</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
