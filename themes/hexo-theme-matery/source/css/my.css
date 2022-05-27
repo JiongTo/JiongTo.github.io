@@ -1,9 +1,7 @@
 /* Here is your custom css styles. */
 .my-color{
 background-color: #062121;
-}
-.tag-color{
-background-color: #d2e47e;
+opacity: 0.9;
 }
 /* 字体颜色变灰白色 */
 body.DarkMode .fas,
