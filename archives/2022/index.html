@@ -3,6 +3,7 @@
 
 
 <head>
+    <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <meta charset="utf-8">
     <meta name="keywords" content="归档: 2022, JiongTo&#39;s Blog">
     <meta name="description" content="要么狠，要么早。">
@@ -17,7 +18,6 @@
 
 
     <title>归档: 2022 | JiongTo&#39;s Blog</title>
-    <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -39,6 +39,29 @@
 
 
 <body>
+    
+  <div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="configure-border-1">
+        <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+        <div class="configure-core"></div>
+      </div>
+      <div class="loading-word">加载中...</div>
+    </div>
+  </div>
+  <!-- 页面加载动画 -->
+  <script>
+    $(document).ready(function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').classList.add("loaded")
+    })
+  </script>
+
+
     <header class="navbar-fixed">
     <nav id="headNav" class="my-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
