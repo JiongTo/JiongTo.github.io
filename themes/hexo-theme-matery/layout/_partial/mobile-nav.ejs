@@ -6,7 +6,7 @@ configRoot = (configRoot === null || configRoot === undefined || configRoot === 
 
     <div class="mobile-head my-color">
         <% if (theme.logo !== undefined && theme.logo.length > 0) { %>
-        <img src="<%- theme.jsDelivr.url %><%- url_for(theme.profile.avatar) %>" class=" circle ">
+        <img src="<%- theme.jsDelivr.url %><%- url_for(theme.profile.avatar) %>" class=" circle responsive-img avatar-img">
         <% } %>
         <div class="logo-name"><%= config.author %></div>
         <div class="logo-desc">
