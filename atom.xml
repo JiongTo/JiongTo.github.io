@@ -3,11 +3,11 @@
   <title>JiongTo&#39;s Blog</title>
   
   
-  <link href="https://jiongto.github.io/atom.xml" rel="self"/>
+  <link href="https://jiongto.us.kg/atom.xml" rel="self"/>
   
-  <link href="https://jiongto.github.io/"/>
+  <link href="https://jiongto.us.kg/"/>
   <updated>2024-08-15T07:48:32.108Z</updated>
-  <id>https://jiongto.github.io/</id>
+  <id>https://jiongto.us.kg/</id>
   
   <author>
     <name>JiongTo</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>web安全</title>
-    <link href="https://jiongto.github.io/posts/def64e49"/>
-    <id>https://jiongto.github.io/posts/def64e49</id>
+    <link href="https://jiongto.us.kg/posts/def64e49"/>
+    <id>https://jiongto.us.kg/posts/def64e49</id>
     <published>2024-08-02T01:26:53.000Z</published>
     <updated>2024-08-15T07:48:32.108Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Python知识点</title>
-    <link href="https://jiongto.github.io/posts/2ff10834"/>
-    <id>https://jiongto.github.io/posts/2ff10834</id>
+    <link href="https://jiongto.us.kg/posts/2ff10834"/>
+    <id>https://jiongto.us.kg/posts/2ff10834</id>
     <published>2024-02-07T15:13:12.000Z</published>
     <updated>2024-05-15T15:53:22.405Z</updated>
     
@@ -56,17 +56,17 @@
     
     
     
-    <category term="知识整理" scheme="https://jiongto.github.io/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
+    <category term="知识整理" scheme="https://jiongto.us.kg/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     
     
-    <category term="Python" scheme="https://jiongto.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://jiongto.us.kg/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>hexo指令</title>
-    <link href="https://jiongto.github.io/posts/89e11d40"/>
-    <id>https://jiongto.github.io/posts/89e11d40</id>
+    <link href="https://jiongto.us.kg/posts/89e11d40"/>
+    <id>https://jiongto.us.kg/posts/89e11d40</id>
     <published>2024-02-06T17:27:00.000Z</published>
     <updated>2024-05-15T15:53:22.405Z</updated>
     
@@ -80,17 +80,17 @@
     
     
     
-    <category term="博客相关" scheme="https://jiongto.github.io/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"/>
+    <category term="博客相关" scheme="https://jiongto.us.kg/categories/%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"/>
     
     
-    <category term="hexo" scheme="https://jiongto.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="https://jiongto.us.kg/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>JAVA</title>
-    <link href="https://jiongto.github.io/posts/498f0b66"/>
-    <id>https://jiongto.github.io/posts/498f0b66</id>
+    <link href="https://jiongto.us.kg/posts/498f0b66"/>
+    <id>https://jiongto.us.kg/posts/498f0b66</id>
     <published>2023-03-16T07:55:14.000Z</published>
     <updated>2024-05-15T15:54:26.268Z</updated>
     
@@ -104,17 +104,17 @@
     
     
     
-    <category term="知识整理" scheme="https://jiongto.github.io/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
+    <category term="知识整理" scheme="https://jiongto.us.kg/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     
     
-    <category term="Java" scheme="https://jiongto.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://jiongto.us.kg/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>操作系统</title>
-    <link href="https://jiongto.github.io/posts/d04bd5bc"/>
-    <id>https://jiongto.github.io/posts/d04bd5bc</id>
+    <link href="https://jiongto.us.kg/posts/d04bd5bc"/>
+    <id>https://jiongto.us.kg/posts/d04bd5bc</id>
     <published>2023-02-16T06:50:51.000Z</published>
     <updated>2024-05-15T15:53:22.405Z</updated>
     
@@ -128,17 +128,17 @@
     
     
     
-    <category term="知识整理" scheme="https://jiongto.github.io/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
+    <category term="知识整理" scheme="https://jiongto.us.kg/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     
     
-    <category term="操作系统" scheme="https://jiongto.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <category term="操作系统" scheme="https://jiongto.us.kg/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
     <title>hw知识汇总</title>
-    <link href="https://jiongto.github.io/posts/de05bc9b"/>
-    <id>https://jiongto.github.io/posts/de05bc9b</id>
+    <link href="https://jiongto.us.kg/posts/de05bc9b"/>
+    <id>https://jiongto.us.kg/posts/de05bc9b</id>
     <published>2022-05-25T05:53:53.000Z</published>
     <updated>2024-05-15T15:53:22.405Z</updated>
     
@@ -152,17 +152,17 @@
     
     
     
-    <category term="知识整理" scheme="https://jiongto.github.io/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
+    <category term="知识整理" scheme="https://jiongto.us.kg/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     
     
-    <category term="攻防" scheme="https://jiongto.github.io/tags/%E6%94%BB%E9%98%B2/"/>
+    <category term="攻防" scheme="https://jiongto.us.kg/tags/%E6%94%BB%E9%98%B2/"/>
     
   </entry>
   
   <entry>
     <title>蓝队面试题</title>
-    <link href="https://jiongto.github.io/posts/ec466f09"/>
-    <id>https://jiongto.github.io/posts/ec466f09</id>
+    <link href="https://jiongto.us.kg/posts/ec466f09"/>
+    <id>https://jiongto.us.kg/posts/ec466f09</id>
     <published>2022-05-25T00:18:04.000Z</published>
     <updated>2024-05-15T15:53:22.405Z</updated>
     
@@ -178,10 +178,10 @@
     
     
     
-    <category term="知识整理" scheme="https://jiongto.github.io/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
+    <category term="知识整理" scheme="https://jiongto.us.kg/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
     
     
-    <category term="攻防" scheme="https://jiongto.github.io/tags/%E6%94%BB%E9%98%B2/"/>
+    <category term="攻防" scheme="https://jiongto.us.kg/tags/%E6%94%BB%E9%98%B2/"/>
     
   </entry>
   
